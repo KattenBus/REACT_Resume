@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  overflow: hidden;
+  cursor: url(mouse.png), auto;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  background-color: aquamarine;
+}
+
+/*--------------------------------MAIN SCREEN---------------------------------------------------------*/
+.Desktop-StartScreen {
+  background-image: url(GRIS_Background.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0px;
+}
+#light .Desktop-StartScreen {
+  background-image: url(GRIS_Background.jpg);
+  transition-duration: 500ms;
+}
+#dark .Desktop-StartScreen {
+  background-image: url(GRIS_Background_DARK.jpg);
+  transition-duration: 500ms;
+}
+
+
+/*--------------------------------TASK BAR---------------------------------------------------------*/
+.Task_Bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  background-color: #47aeae;
+  color: #FFFFFF;
+}
+#light .Task_Bar {
+  border: 3px solid #98c2c2;
+  background-color: #47aeae;
+  transition-duration: 500ms;
+}
+#dark .Task_Bar {
+  border: 3px solid #bd8381;
+  background-color: #bc605d;
+  transition-duration: 500ms;
+}
+#Menu_Section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  
+}
+#Date_And_Time_Section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+#Vertical_Line {
+  border-right: 1px solid #FFFFFF;
+  height: 2.5rem;
+  margin: 20px;
+}
+#dot {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+#darkMode-Button {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  transition: 500ms;
+  outline: none;
+  cursor: pointer;
+}
+#darkMode-Button::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: (-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #bc605d;
+  transition: left 300ms;
+}
+#darkMode-Button:checked {
+ background-color: white;
+}
+#darkMode-Button:checked::after {
+  left: 40%;
+  background-color: #47aeae;
+}
+
+
+/*--------------------------------ICONS---------------------------------------------------------*/
+.icon-Structure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  cursor: default;
+  height: 7rem;
+  width: 7rem;
+}
+#icon-Image {
+  height: 5rem;
+  width: 5rem;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+#icon-Text {
+  width: 5rem;
+  text-align: center;
+  flex-wrap: wrap;
+  word-wrap:break-word;
+}
+#light .icon-Structure {
+  color: black;
+  transition-duration: 500ms;
+}
+#light .icon-Structure:hover {
+  border-radius: 5px;
+  background-color: rgba(71, 174, 174, 0.5);
+}
+#dark .icon-Structure {
+  color: #FFFFFF;
+  transition-duration: 500ms;
+}
+#dark .icon-Structure:hover {
+  border-radius: 5px;
+  background-color: rgba(188, 96, 93, 0.5);
+}
+
+
+/*--------------------------------Window---------------------------------------------------------*/
+.Window-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bc605d;
+  height: 2.5rem;
+  cursor: default;
+}
+#light .Window-Header {
+  background-color: #47aeae;
+  transition-duration: 500ms;
+}
+#dark .Window-Header {
+  background-color: #bc605d;
+  transition-duration: 500ms;
+}
+#Window-Left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#Window-Image {
+  height: 2rem;
+}
+#Window-Right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+#Window-Minimize, 
+#Window-MMaximize, 
+#Window-Close {
+  display: flex;
+  align-items: center;
+  height: 100%; 
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+#Window-Minimize:hover, 
+#Window-MMaximize:hover {
+  cursor: pointer;
+}
+#Window-Close:hover {
+  cursor: pointer;
+}
+#light #Window-Minimize:hover {
+  background-color: #98c2c2;
+  transition-duration: 500ms;
+}
+#dark #Window-Minimize:hover {
+  background-color: #bd8381;
+  transition-duration: 500ms;
+}
+#light #Window-MMaximize:hover {
+  background-color: #98c2c2;
+  transition-duration: 500ms;
+}
+#dark #Window-MMaximize:hover {
+  background-color: #bd8381;
+  transition-duration: 500ms;
+}
+#light #Window-Close:hover {
+  background-color: #bd8381;
+  transition-duration: 500ms;
+}
+#dark #Window-Close:hover {
+  background-color: #98c2c2;
+  transition-duration: 500ms;
+}
+.Window-Body{
+  position: absolute;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  margin-top: -40px;
+  padding-top: 40px;
+  z-index: -1;
+}
+
+/*--------------------------------Rnd---------------------------------------------------------*/
+.rnd-Options {
+  border-radius: 5px 5px 0px 0px;
+  border: 3px solid black;
+}
+#light .rnd-Options {
+  border: 3px solid #98c2c2;
+}
+#dark .rnd-Options {
+  border: 3px solid #bd8381;
+}
+
+/*--------------------------------OTHER---------------------------------------------------------*/
+
+.YOUTUBE {
+  width: 100%;
+  height: 100%;
+}
+
+
+.Job_TextFiles-Container {
+  box-sizing: border-box;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+}
+#Job-List {
+  height: 400px;
+  width: 400px;
+}
