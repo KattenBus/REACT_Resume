@@ -18,7 +18,7 @@ main {
 
 /*--------------------------------MAIN SCREEN---------------------------------------------------------*/
 .Desktop-StartScreen {
-  background-image: url(GRIS_Background.jpg);
+  background-image: url('/GRIS_Background.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,11 +27,11 @@ main {
   padding: 0px;
 }
 #light .Desktop-StartScreen {
-  background-image: url(GRIS_Background.jpg);
+  background-image: url('/GRIS_Background.jpg');
   transition-duration: 500ms;
 }
 #dark .Desktop-StartScreen {
-  background-image: url(GRIS_Background_DARK.jpg);
+  background-image: url('/GRIS_Background_DARK.jpg');
   transition-duration: 500ms;
 }
 
