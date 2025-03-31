@@ -1,7 +1,7 @@
-import Text_Doc_logo from "/public/Text_Doc-logo.png";
-import Folder_logo from "/public/Folder-logo.png";
-import MyPC_logo from "/public/MYPC-logo.png";
-import VLC_logo from "/public/VLC-logo.png";
+import Text_Doc_logo from "/Text_Doc-logo.png";
+import Folder_logo from "/Folder-logo.png";
+import MyPC_logo from "/MyPC-logo.png";
+import VLC_logo from "/VLC-logo.png";
 
 export const textFilesData = [{
     workPlace: "Biometria",
