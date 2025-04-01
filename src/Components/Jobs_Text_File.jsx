@@ -8,12 +8,14 @@ export default function Jobs_Text_File() {
                 {textFilesData.map((job, index) => {
                     console.log(job)
                     return(
-                        <div key={index}>
-                            <h1>{job.workPlace}</h1>
-                            <p>{job.startDate}</p>
-                            <p>{job.endDate}</p>
-                            <p>{job.description}</p>
-                            <p>{job.city}</p>
+                        <div id = "Generated-JobList" key={index}>
+                            <h1 id = "JobList-Information">{job.workPlace}</h1>
+                            <div id = "JobList-Information-Dates">
+                                <p>{job.startDate}-</p>
+                                <p>{job.endDate}</p>
+                                <p>, {job.city}</p>
+                            </div>
+                            <p id = "JobList-Information">{job.description}</p>
                         </div>
                     );
                 })}
