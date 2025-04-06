@@ -8,11 +8,28 @@ export default function Window({children, contentIcon, contentText, closeWindow}
 
     const [position, setPosition] = useState({x: 400, y: 400});
     const [size, setSize] = useState({width: 400, height: 400});
+    const [isFullScreen, setIsFullScreen] = useState(false);
+
+    function handleFullScreen() {
+        if (isFullScreen) {
+            setSize({ width: 400, height: 400 });
+            setPosition({ x: 400, y: 400 });
+            setIsFullScreen(false);
+        } else {
+            const viewportHeight = window.innerHeight
+            const viewportWidth = window.innerWidth
+            setSize({ width: viewportWidth, height: viewportHeight - 40 });
+            setPosition({ x: 0, y: 0 });
+            setIsFullScreen(true);
+        }
+    };
+
+    const rndClassName = `rnd-Options ${isFullScreen ? 'rnd-Options-Fullscreen' : ''}`;
 
     return(
 
         <Rnd
-        className = "rnd-Options"
+        className = {rndClassName}
             size = {{width: size.width, height: size.height}}
             position = {{x: position.x, y: position.y}}
             dragHandleClassName="Window-Header"
@@ -34,7 +51,7 @@ export default function Window({children, contentIcon, contentText, closeWindow}
                     </div>
                     <div id = "Window-Right"> 
                     <h2 id = "Window-Minimize"><FaRegWindowMinimize /></h2>
-                    <h2 id = "Window-MMaximize"><LuMaximize2 /></h2>
+                    <h2 onClick = {handleFullScreen} id = "Window-MMaximize"><LuMaximize2 /></h2>
                     <h2 onClick = {closeWindow} id = "Window-Close"><FaX /></h2>
                     </div>
                 </div>

@@ -338,6 +338,14 @@ main {
   transition-duration: 200ms;
 }
 
+.Dialouge-Area {
+  display: flex;
+  overflow: auto;
+  height: 400px;
+  width: 400px;
+  background-color: #bbb;
+}
+
 /*--------------------------------OTHER---------------------------------------------------------*/
 
 .YOUTUBE {
