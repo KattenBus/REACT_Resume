@@ -6,8 +6,8 @@ import { FaRegWindowMinimize } from "react-icons/fa";
 
 export default function Window({children, contentIcon, contentText, closeWindow}) {
 
-    const [position, setPosition] = useState({x: 100, y: 100});
-    const [size, setSize] = useState({width: 400, height: 300});
+    const [position, setPosition] = useState({x: 400, y: 400});
+    const [size, setSize] = useState({width: 400, height: 400});
 
     return(
 

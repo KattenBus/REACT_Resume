@@ -1,11 +1,11 @@
 import Clock from "./Clock";
 
-export default function TaskBar({toogleDarkMode}) {
+export default function TaskBar({toogleDarkMode, toogleShowMenu}) {
 
     return (
         <nav className = "Task_Bar">
             <div id = "Menu_Section">
-                <p>Menu</p>
+                <p onClick={toogleShowMenu}>Menu</p>
                 <div id = "Vertical_Line"/>
             </div>
             <div id = "Date_And_Time_Section">
