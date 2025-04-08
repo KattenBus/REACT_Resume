@@ -13,7 +13,6 @@ main {
   height: 100vh;
   width: 100vw;
   margin: 0px;
-  background-color: aquamarine;
 }
 
 /*--------------------------------MAIN SCREEN---------------------------------------------------------*/
@@ -35,6 +34,31 @@ main {
 }
 
 
+/*--------------------------------CLOCK---------------------------------------------------------*/
+.city-time {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.time-separator {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 /*--------------------------------TASK BAR---------------------------------------------------------*/
 .Task_Bar {
   display: flex;
@@ -43,6 +67,7 @@ main {
   height: 2.5rem;
   background-color: #47aeae;
   color: #FFFFFF;
+  font-size: 1.5rem;
 }
 #light .Task_Bar {
   border: 3px solid #98c2c2;

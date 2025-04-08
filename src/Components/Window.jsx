@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Rnd } from "react-rnd";
 import { FaX } from "react-icons/fa6";
 import { LuMaximize2 } from "react-icons/lu";
 import { FaRegWindowMinimize } from "react-icons/fa";
 
+
+let highestZIndex = 1;
+
 export default function Window({children, contentIcon, contentText, closeWindow}) {
+
+
+    const [, forceUpdate] = useState({});
+
+    function handleZIndexIncrease() {
+      highestZIndex += 1;
+      console.log(highestZIndex);
+      forceUpdate({});
+    }
 
     const [position, setPosition] = useState({x: 400, y: 400});
     const [size, setSize] = useState({width: 400, height: 400});
@@ -29,7 +41,7 @@ export default function Window({children, contentIcon, contentText, closeWindow}
     return(
 
         <Rnd
-        className = {rndClassName}
+            className = {rndClassName}
             size = {{width: size.width, height: size.height}}
             position = {{x: position.x, y: position.y}}
             dragHandleClassName="Window-Header"
@@ -42,6 +54,10 @@ export default function Window({children, contentIcon, contentText, closeWindow}
                 setPosition(position)
             }}
             bounds = ".Desktop-StartScreen"
+            style={{ zIndex: highestZIndex }} // Use the global zIndex
+            onClick={handleZIndexIncrease}
+            onDragStart={handleZIndexIncrease}
+            onResizeStart={handleZIndexIncrease}
         >
             <div className = "Window-Container">
                 <div className = "Window-Header">

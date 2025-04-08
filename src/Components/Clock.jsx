@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Clock() {
 
+    let separator = ":";
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
@@ -17,16 +18,16 @@ export default function Clock() {
         timeZone: "Europe/Stockholm",
     }];
 
-    const formatedTime = time.toLocaleTimeString(
-        "en-UK",
-        {timeZone: cities.timeZone,
-        hour: "2-digit",
-        minute: "2-digit"
-    });
+    const hours = time.getHours().toString().padStart(2, '0');
+    const minutes = time.getMinutes().toString().padStart(2, '0');
 
     return(
         <div>
-            <div className = "city-time">{formatedTime}</div>
+            <div className = "city-time">                
+                <span className="time-hour">{hours}</span>
+                <span className="time-separator">{separator}</span>
+                <span className="time-minute">{minutes}</span>
+            </div>
         </div>
     );
 }

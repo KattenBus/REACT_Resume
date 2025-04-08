@@ -30,7 +30,6 @@ function App() {
   function handleCloseWindow(id) {
     setOpenWindows((previous) => previous.filter((windowId) => windowId !== id));
   }
-
   return (
     <>
       <ThemeContext.Provider value = {{ theme, toggleTheme }}>
@@ -69,6 +68,7 @@ function App() {
                   contentText={windowData.name}
                   closeWindow={() => handleCloseWindow(windowId)}
                 >
+                  
                   {windowId === 1 && <Jobs_Text_File/>}
                   {windowId === 3 && <VideoPlayer/>}
                 </Window>
