@@ -66,9 +66,9 @@ export default function Window({children, contentIcon, contentText, closeWindow}
                         <p>{contentText}</p>
                     </div>
                     <div id = "Window-Right"> 
-                    <h2 id = "Window-Minimize"><FaRegWindowMinimize /></h2>
-                    <h2 onClick = {handleFullScreen} id = "Window-MMaximize"><LuMaximize2 /></h2>
-                    <h2 onClick = {closeWindow} id = "Window-Close"><FaX /></h2>
+                        <h2 id = "Window-Minimize"><FaRegWindowMinimize /></h2>
+                        <h2 onClick = {handleFullScreen} id = "Window-MMaximize"><LuMaximize2 /></h2>
+                        <h2 onClick = {closeWindow} id = "Window-Close"><FaX /></h2>
                     </div>
                 </div>
                 <div className = "Window-Body">

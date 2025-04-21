@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -12,7 +13,6 @@ main {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  margin: 0px;
 }
 
 /*--------------------------------MAIN SCREEN---------------------------------------------------------*/
@@ -21,8 +21,6 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   flex-grow: 1;
-  margin: 0;
-  padding: 0px;
 }
 #light .Desktop-StartScreen {
   background-image: url('/GRIS_Background.jpg');
@@ -65,9 +63,9 @@ main {
   align-items: center;
   justify-content: space-between;
   height: 2.5rem;
-  background-color: #47aeae;
   color: #FFFFFF;
   font-size: 1.5rem;
+  
 }
 #light .Task_Bar {
   border: 3px solid #98c2c2;
@@ -253,7 +251,6 @@ main {
 }
 .Window-Body{
   position: absolute;
-  box-sizing: border-box;
   background-color: whitesmoke;
   height: 100%;
   width: 100%;
@@ -265,6 +262,7 @@ main {
 
 /*--------------------------------Rnd---------------------------------------------------------*/
 .rnd-Options {
+  flex-direction: column;
   border-radius: 5px 5px 0px 0px;
   border: 3px solid black;
   min-width: 301px;
@@ -369,6 +367,18 @@ main {
   height: 400px;
   width: 400px;
   background-color: #bbb;
+}
+
+
+/*--------------------------------Pictures---------------------------------------------------------*/
+
+.Pictures-Container{
+  display: flex;
+  flex-direction: column;
+}
+#pictures{
+  height: 100px;
+  width: 100px;
 }
 
 /*--------------------------------OTHER---------------------------------------------------------*/

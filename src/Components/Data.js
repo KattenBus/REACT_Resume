@@ -2,6 +2,11 @@ import Text_Doc_logo from "/Text_Doc-logo.png";
 import Folder_logo from "/Folder-logo.png";
 import MyPC_logo from "/MyPC-logo.png";
 import VLC_logo from "/VLC-logo.png";
+import Test_Image_1 from "/Test_Image_1.jpg";
+import Test_Image_2 from "/Test_Image_2.jpg";
+import Test_Image_3 from "/Test_Image_3.jpg";
+import Test_Image_4 from "/Test_Image_4.jpg";
+import Simon_Nya_Zeeland from "/Simon_Nya_Zeeland.jpg";
 
 export const textFilesData = [{
     workPlace: "Biometria",
@@ -53,3 +58,30 @@ export const iconInformation = [{
     x: 50,
     y: 50,
 }];
+
+export const pictures = [{
+  Id: 1,
+  name: "Test 1",
+  imagePath: Test_Image_1
+},
+{
+  Id: 2,
+  name: "Test 2",
+  imagePath: Test_Image_2
+},
+{
+  Id: 3,
+  name: "Test 3",
+  imagePath: Test_Image_3
+},
+{
+  Id: 4,
+  name: "Test 4",
+  imagePath: Test_Image_4
+},
+{
+  Id: 5,
+  name: "Simon Nya Zeeland",
+  imagePath: Simon_Nya_Zeeland
+},
+]
