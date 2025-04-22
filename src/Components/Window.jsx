@@ -54,7 +54,7 @@ export default function Window({children, contentIcon, contentText, closeWindow}
                 setPosition(position)
             }}
             bounds = ".Desktop-StartScreen"
-            style={{ zIndex: highestZIndex }} // Use the global zIndex
+            style={{ zIndex: highestZIndex }}
             onClick={handleZIndexIncrease}
             onDragStart={handleZIndexIncrease}
             onResizeStart={handleZIndexIncrease}

@@ -6,6 +6,7 @@ import Clock from "./Clock";
 export default function TaskBar({ toogleShowMenu }) {
 
     const themeContext = useContext(ThemeContext);
+
     return (
         <nav className = "Task_Bar">
             <div id = "Menu_Section">
