@@ -1,4 +1,3 @@
-import Folder_Icon_Structure from "./Folder_Icon_Structure";
 import Cat from "/Cat.jpg";
 import { catJokes } from "./Data";
 import Folder_Sidebar from "./Folder_Sidebar";

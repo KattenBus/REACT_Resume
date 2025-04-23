@@ -53,7 +53,7 @@ export const iconInformation = [{
   },
   {
     Id: 4,
-    name: "My PC",
+    name: "My Computer",
     image: MyPC_logo,
     x: 50,
     y: 50,

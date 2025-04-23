@@ -1,6 +1,6 @@
 import { iconInformation } from "./Data";
 
-export default function DropDown_Menu({onItemClick,}) {
+export default function DropDown_Menu({onItemClick}) {
 
     return(
         <section className = "Menu-Container">
