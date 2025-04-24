@@ -5,23 +5,22 @@ export const WindowContext = createContext();
 
 export default function WindowContextProvider({children}) {
 
-      const [openWindows, setOpenWindows] = useState([]);
+  const [openWindows, setOpenWindows] = useState([]);
 
-      function handleShowWindow(id) {
-        if (!openWindows.includes(id)) {
-          setOpenWindows((previous) => [...previous, id]);
-        }
-      }
-      function handleCloseWindow(id) {
-        setOpenWindows((previous) => previous.filter((windowId) => windowId !== id));
-        setOpenfolder(startFolder);
-      }
+  function handleShowWindow(id) {
+    if (!openWindows.includes(id)) {
+      setOpenWindows((previous) => [...previous, id]);
+    }
+  }
+  function handleCloseWindow(id) {
+    setOpenWindows((previous) => previous.filter((windowId) => windowId !== id));
+  }
 
-    return(
-        <WindowContext.Provider value = {{openWindows, handleShowWindow, handleCloseWindow}}>
-            {children}
-        </WindowContext.Provider>
-    );
+  return(
+    <WindowContext.Provider value = {{openWindows, handleShowWindow, handleCloseWindow}}>
+        {children}
+    </WindowContext.Provider>
+  );
 }
 
 

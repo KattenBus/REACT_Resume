@@ -457,7 +457,13 @@ main {
   background-color: #bd8381;
   transition-duration: 200ms;
 }
+#folder-goBack-button-active {
 
+}
+#folder-goBack-button-passive {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 /*--------------------------------FOLDER-ICONS---------------------------------------------------------*/
 .folder-icon-structure {
@@ -500,7 +506,7 @@ main {
 }
 
 
-/*--------------------------------IMAGE-VIEWR---------------------------------------------------------*/
+/*--------------------------------IMAGE-VIEWER---------------------------------------------------------*/
 .image-viewer-container {
   display: flex;
   flex-direction: column;

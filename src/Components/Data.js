@@ -147,7 +147,7 @@ export const catJokes = [{
 },{
   joke: "What's a cat's favorite subject in school? Hisss-tory!"
 },{
-  joke: "Why are cats such bad poker players? Because they always have a purr-fect hand!"
+  joke: "Why are cats such good poker players? Because they always have a purr-fect hand!"
 },{
   joke: "What do you call a cat that loves to bowl? An alley cat!"
 },{

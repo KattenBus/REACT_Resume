@@ -74,10 +74,6 @@ export default function Desktop_StartScreen() {
                         {windowId === 3 && <VideoPlayer/>}
                         {windowId === 4 && (
                             <>
-                                {folderContext.currentFolderPath.length > 1 && (
-                                    <button onClick={folderContext.handleGoBackFolder}>BACK</button>
-                                )}
-                                {console.log("Desktop_StartScreen - Before getCurrentFolderContent:", folderContext.currentFolderPath)} {/* Add this line */}
                                 {folderContext.getCurrentFolderContent(folderContext.currentFolderPath).length > 0 ? (
                                     <Folder_Icon_Structure>
                                         {folderContext.getCurrentFolderContent(folderContext.currentFolderPath).map((item, index) => (
