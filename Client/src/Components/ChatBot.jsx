@@ -1,9 +1,25 @@
 import React, { useState } from 'react';
+import Cat from "/Cat.jpg";
+import Window from './Window';
+import { FaCat } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
+
 
 export default function Chatbot() {
   const [question, setQuestion] = useState('');  // Holds user input
-  const [answer, setAnswer] = useState('');      // Holds the response from the backend
+  const [answer, setAnswer] = useState([]);      // Holds the response from the backend
   const [loading, setLoading] = useState(false); // For showing loading spinner
+  const [showChatBot, setShowChatBot] = useState(false);
+
+  const [chatHistory, setShowChatHistory] = useState([{
+    user: {question},
+    kedelbejn: {answer}
+  }]);
+
+
+  function handleShowChatBot() {
+    setShowChatBot((previousState) => !previousState);
+  }
 
   // Handle user input
   const handleInputChange = (event) => {
@@ -17,7 +33,7 @@ export default function Chatbot() {
     if (!question) return;  // Don't send empty question
 
     setLoading(true);  // Show loading spinner
-    setAnswer('');     // Clear previous answer
+    //setAnswer('');     // Clear previous answer
 
     try {
       // Sending POST request to your backend
@@ -29,43 +45,66 @@ export default function Chatbot() {
         body: JSON.stringify({ question }),  // Send the question as the request body
       });
 
+      setQuestion('');
+
       const data = await response.json();  // Parse the response JSON
 
       if (response.ok) {
-        setAnswer(data.answer);  // Update the answer state with the response from the backend
+        setAnswer((previous) => [...previous, data.answer]);  // Update the answer state with the response from the backend
       } else {
         setAnswer('Sorry, something went wrong. Please try again.');
       }
     } catch (error) {
-      setAnswer('Error: Could not connect to the bot.');
+      setAnswer('Error: Could not connect with the cat.');
       console.error('Error:', error);
     } finally {
       setLoading(false);  // Hide loading spinner once response is received
     }
   };
-  
+
 
   return (
-    <div>
-      <h1>Chat with the Bot</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={question}
-          onChange={handleInputChange}
-          placeholder="Ask a question..."
-        />
-        <button type="submit" disabled={loading}>
-          {loading ? 'Asking...' : 'Ask'}
-        </button>
-      </form>
+    <>
+      <div className = "chatbot-icon" onClick={handleShowChatBot}>
+        <img src ={Cat} id = "chatbot-picture"/>
+      </div>
 
-      {answer && (
-        <div>
-          <h2>Answer:</h2>
-          <p>{answer}</p>
+      {showChatBot && (
+
+        <Window
+          contentIcon={Cat}
+          contentText={"Prata med Kedelbejn!"}
+        >
+        <div className = "chatbot-container">
+          <div id = "conversation-window">
+            {answer.length > 0 && (
+              answer.map((message, index) => (
+                <div id = "kidelbejn-answer">
+                  <div id = "kidelbejn-avatar-section">
+                    <img src = {Cat} id = "kidelbejn-avatar-photo"/>
+                      <p>Kedelbejn</p>
+                  </div>
+                  <p key={index}>{message}</p>
+                </div>
+              ))
+            )}
+          </div>
+          <form id = "message-area" onSubmit={handleSubmit}>
+            <input id = "inputField-chatBot"
+              type="text"
+              value={question}
+              onChange={handleInputChange}
+              placeholder="Ställ honom en fråga!"
+            />
+            <button type="submit" id = "inputFieldd-button" disabled={loading}>
+              {loading ? <p id = "chatbot-button-logo"><FaCat /></p> : <p><FaLocationArrow /></p>}
+            </button>
+          </form>
         </div>
+        </Window>
+
       )}
-    </div>
+
+    </>
   );
 }

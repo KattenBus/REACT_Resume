@@ -8,6 +8,7 @@ import Folder_Icon_Structure from "./Folder_Icon_Structure";
 import Folder_Icon from "./Folder_Icons";
 import Empty_Folder from "./Empty_Folder";
 import Image_Viewer from "./Image_Viewer";
+import Chatbot from "./ChatBot";
 
 import { useContext } from "react";
 import { FolderContext } from "../Context/Folder-Context";
@@ -100,6 +101,7 @@ export default function Desktop_StartScreen() {
                 );
             })}
 
+            <Chatbot />
             {menuContext.showMenu && 
                 <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
             }

@@ -543,9 +543,144 @@ main {
 
 }
 
+
+/*--------------------------------CHATBOT---------------------------------------------------------*/
+
+.chatbot-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: 5px solid borderColors;
+  border-radius: 1000px;
+  height: 120px;
+  width: 120px;
+  cursor: pointer;
+
+  animation: 
+    borderColors 2s alternate-reverse infinite,
+    bounce 2s alternate-reverse infinite;
+}
+@keyframes borderColors {
+  from  {background-color: #bc605d;}
+  to {background-color:#47aeae;}
+}
+@keyframes bounce {
+  from  {bottom: 50px; right: 50px;}
+  to {bottom: 60px; right: 50px;}
+}
+
+
+#chatbot-picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+#conversation-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color:#bbb;
+  font-size: 20px;
+  padding: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  gap: 10px;
+}
+#kidelbejn-answer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+#kidelbejn-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+
+  font-size: 14px;
+  gap: 2px;
+}
+#kidelbejn-avatar-section p {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 1px;
+}
+#kidelbejn-avatar-photo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+#message-area {
+  display: flex;
+  flex-direction: row;
+  background-color:#bbb;
+  height: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#inputField-chatBot {
+  width: 100%;
+  font-size: 20px;
+  overflow: scroll;
+  border: none;
+}
+#inputFieldd-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+}
+#chatbot-button-logo {
+
+  animation: spinningLogo 0.3s alternate-reverse infinite;
+}
+
+@keyframes spinningLogo {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(180deg);}
+}
+
+#light #kidelbejn-answer {
+  color: black;
+  background-color: #98c2c2;
+  transition-duration: 500ms;
+}
+#dark #kidelbejn-answer {
+  color: #FFFFFF;
+  background-color: #bd8381;
+  transition-duration: 500ms;
+}
+#light #kidelbejn-avatar-section p{
+  color: black;
+  background-color: #FFFFFF;
+  transition-duration: 500ms;
+}
+#dark #kidelbejn-avatar-section p{
+  color: #FFFFFF;
+  background-color: black;
+  transition-duration: 500ms;
+}
+
+
 /*--------------------------------OTHER---------------------------------------------------------*/
 
 .YOUTUBE {
   width: 100%;
   height: 100%;
 }
+

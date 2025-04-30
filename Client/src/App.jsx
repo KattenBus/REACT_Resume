@@ -5,7 +5,6 @@ import WindowContextProvider from "./Context/Window-Context";
 import FolderContextProvider from "./Context/Folder-Context";
 import MenuContextProvider from "./Context/Menu-Context";
 import Task_Bar from "./Components/Task_Bar";
-import Chatbot from "./Components/ChatBot";
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
 
                 <Task_Bar/> 
                 <Desktop_StartScreen />
-                <Chatbot />
 
               </Main_Page>
             </MenuContextProvider>
