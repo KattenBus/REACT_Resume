@@ -596,6 +596,12 @@ main {
   overflow-x: hidden;
   gap: 10px;
 }
+.chat-message-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 #kidelbejn-answer {
   display: flex;
   flex-direction: row;
@@ -623,6 +629,36 @@ main {
   width: 60px;
   border-radius: 50px;
 }
+
+#user-message {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  padding: 10px;
+}
+#user-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+
+  font-size: 14px;
+  gap: 2px;
+}
+#user-avatar-section p{
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 1px;
+}
+#user-avatar-photo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+}
+
 #message-area {
   display: flex;
   flex-direction: row;
@@ -655,7 +691,7 @@ main {
   to {transform: rotate(180deg);}
 }
 
-#light #kidelbejn-answer {
+#light #kidelbejn-answer  {
   color: black;
   background-color: #98c2c2;
   transition-duration: 500ms;
@@ -671,6 +707,26 @@ main {
   transition-duration: 500ms;
 }
 #dark #kidelbejn-avatar-section p{
+  color: #FFFFFF;
+  background-color: black;
+  transition-duration: 500ms;
+}
+#light #user-message  {
+  color: black;
+  background-color: #b3c9c9;
+  transition-duration: 500ms;
+}
+#dark #user-message {
+  color: #FFFFFF;
+  background-color: #bfa4a3;
+  transition-duration: 500ms;
+}
+#light #user-avatar-section p{
+  color: black;
+  background-color: #FFFFFF;
+  transition-duration: 500ms;
+}
+#dark #user-avatar-section p{
   color: #FFFFFF;
   background-color: black;
   transition-duration: 500ms;
