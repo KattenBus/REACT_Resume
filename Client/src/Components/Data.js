@@ -6,6 +6,7 @@ import Test_Image_1 from "/Test_Image_1.jpg";
 import Test_Image_2 from "/Test_Image_2.jpg";
 import Test_Image_3 from "/Test_Image_3.jpg";
 import Test_Image_4 from "/Test_Image_4.jpg";
+import Cat from "/Cat.jpg";
 import Simon_Nya_Zeeland from "/Simon_Nya_Zeeland.jpg";
 
 export const textFilesData = [{
@@ -57,6 +58,13 @@ export const iconInformation = [{
     image: MyPC_logo,
     x: 50,
     y: 50,
+},
+{
+  Id: 5,
+  name: "Kedelbejn",
+  image: Cat,
+  x: 50,
+  y: 50,
 }];
 
 export const MY_PC_Folder = [{
@@ -104,35 +112,35 @@ export const gamesFolder = [{
 }];
 
 export const pictures = [{
-  Id: 6,
+  Id: 20,
   name: "Test 1",
   image: Test_Image_1,
   x: 500,
   y: 50,
 },
 {
-  Id: 7,
+  Id: 21,
   name: "Test 2",
   image: Test_Image_2,
   x: 500,
   y: 50,
 },
 {
-  Id: 8,
+  Id: 22,
   name: "Test 3",
   image: Test_Image_3,
   x: 500,
   y: 50,
 },
 {
-  Id: 9,
+  Id: 23,
   name: "Test 4",
   image: Test_Image_4,
   x: 500,
   y: 50,
 },
 {
-  Id: 5,
+  Id: 24,
   name: "Simon Nya Zeeland",
   image: Simon_Nya_Zeeland,
   x: 500,

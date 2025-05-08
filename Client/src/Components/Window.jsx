@@ -1,22 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Rnd } from "react-rnd";
 import { FaX } from "react-icons/fa6";
 import { LuMaximize2 } from "react-icons/lu";
 import { FaRegWindowMinimize } from "react-icons/fa";
+import { WindowContext } from "../Context/Window-Context";
+import { useContext } from "react";
 
 
-let highestZIndex = 1;
 
-export default function Window({children, contentIcon, contentText, closeWindow}) {
+export default function Window({children, contentIcon, contentText, closeWindow, windowId}) {
 
 
-    const [, forceUpdate] = useState({});
-
-    function handleZIndexIncrease() {
-      highestZIndex += 1;
-      console.log(highestZIndex);
-      forceUpdate({});
-    }
+    const { zIndices, handleZIndexIncrease } = useContext(WindowContext);
 
     const [position, setPosition] = useState({x: 400, y: 400});
     const [size, setSize] = useState({width: 400, height: 400});
@@ -54,10 +49,10 @@ export default function Window({children, contentIcon, contentText, closeWindow}
                 setPosition(position)
             }}
             bounds = ".Desktop-StartScreen"
-            style={{ zIndex: highestZIndex }}
-            onClick={handleZIndexIncrease}
-            onDragStart={handleZIndexIncrease}
-            onResizeStart={handleZIndexIncrease}
+            style={{ zIndex: zIndices[windowId] || 0 }}
+            onClick={() => handleZIndexIncrease(windowId)}
+            onDragStart={() => handleZIndexIncrease(windowId)}
+            onResizeStart={() => handleZIndexIncrease(windowId)}
         >
             <div className = "Window-Container">
                 <div className = "Window-Header">

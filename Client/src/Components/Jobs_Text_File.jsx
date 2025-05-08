@@ -6,7 +6,6 @@ export default function Jobs_Text_File() {
         <section className="Job_TextFiles-Container">
             <div id = "Job-List">
                 {textFilesData.map((job, index) => {
-                    console.log(job)
                     return(
                         <div id = "Generated-JobList" key={index}>
                             <h1 id = "JobList-Information">{job.workPlace}</h1>

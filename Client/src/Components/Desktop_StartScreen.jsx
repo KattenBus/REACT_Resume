@@ -8,7 +8,8 @@ import Folder_Icon_Structure from "./Folder_Icon_Structure";
 import Folder_Icon from "./Folder_Icons";
 import Empty_Folder from "./Empty_Folder";
 import Image_Viewer from "./Image_Viewer";
-import Chatbot from "./ChatBot";
+import Chatbot_Icon from "./ChatBot_Icon";
+import Chatbot_Window from "./ChatBot_Window";
 
 import { useContext } from "react";
 import { FolderContext } from "../Context/Folder-Context";
@@ -16,9 +17,7 @@ import { WindowContext } from "../Context/Window-Context";
 import { MenuContext } from "../Context/Menu-Context";
 
 
-
 export default function Desktop_StartScreen() {
-
 
     const folderContext = useContext(FolderContext);
     const windowContext = useContext(WindowContext);
@@ -33,7 +32,9 @@ export default function Desktop_StartScreen() {
                 />
             }
 
-            {iconInformation.map((icon, index) => (
+            {iconInformation
+            .filter(icon => icon.Id !== 5)
+            .map((icon, index) => (
                 <Desktop_Icon 
                     key = {index}
                     iconText= {icon.name}
@@ -47,18 +48,23 @@ export default function Desktop_StartScreen() {
                     } else {
                         windowContext.handleShowWindow(icon.Id)
                     }
-                    }}
+                }}
                 />
             ))}
 
+            <Chatbot_Icon 
+                windowId={5}
+            />
+            
             {windowContext.openWindows.map((windowId) => {
                 const windowData = iconInformation.find((icon) => icon.Id === windowId);
                 const pictureData = pictures.find((picture) => picture.Id === windowId);
                 return (
                     <Window
                         key={windowId}
-                        contentIcon={windowId >= 5 && windowId <= 9 ? pictureData.image : windowData.image}
-                        contentText={windowId >= 5 && windowId <= 9 ? pictureData.name : windowData.name}
+                        windowId={windowId}
+                        contentIcon={windowId >= 20 && windowId <= 24 ? pictureData.image : windowData.image}
+                        contentText={windowId >= 20 && windowId <= 24 ? pictureData.name : windowData.name}
                         closeWindow={() => windowContext.handleCloseWindow(windowId)}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
@@ -91,7 +97,8 @@ export default function Desktop_StartScreen() {
                                 )}
                             </>
                         )}
-                        {windowId >= 5 && windowId <= 9 && pictureData && (
+                        {windowId === 5 && <Chatbot_Window/>}
+                        {windowId >= 20 && windowId <= 24 && pictureData && (
                             <Image_Viewer
                                 imageText={pictureData.name}
                                 imagePath={pictureData.image}
@@ -101,7 +108,6 @@ export default function Desktop_StartScreen() {
                 );
             })}
 
-            <Chatbot />
             {menuContext.showMenu && 
                 <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
             }

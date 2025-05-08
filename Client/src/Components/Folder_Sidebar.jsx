@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { FolderContext } from "../Context/Folder-Context";
+import { WindowContext } from "../Context/Window-Context";
 
 export default function Folder_Sidebar() {
 
   const folderContext = useContext(FolderContext);
+    const { zIndices, handleZIndexIncrease } = useContext(WindowContext);
 
   return (
     <aside id="folder-sidebar">
@@ -24,7 +26,7 @@ export default function Folder_Sidebar() {
             {folderContext.getCurrentFolderContent(["My Computer"]).map(item => (
             <li
                 key={item.Id}
-                onClick={() =>
+                onClick={() => 
                     item.onOpen(["My Computer"])
                 }
             >
