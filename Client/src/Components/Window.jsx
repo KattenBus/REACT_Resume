@@ -11,7 +11,7 @@ import { useContext } from "react";
 export default function Window({children, contentIcon, contentText, closeWindow, windowId}) {
 
 
-    const { zIndices, handleZIndexIncrease } = useContext(WindowContext);
+    const windowContext = useContext(WindowContext);
 
     const [position, setPosition] = useState({x: 400, y: 400});
     const [size, setSize] = useState({width: 400, height: 400});
@@ -49,10 +49,10 @@ export default function Window({children, contentIcon, contentText, closeWindow,
                 setPosition(position)
             }}
             bounds = ".Desktop-StartScreen"
-            style={{ zIndex: zIndices[windowId] || 0 }}
-            onClick={() => handleZIndexIncrease(windowId)}
-            onDragStart={() => handleZIndexIncrease(windowId)}
-            onResizeStart={() => handleZIndexIncrease(windowId)}
+            style={{ zIndex: windowContext.zIndices[windowId] || 0 }}
+            onClick={() => windowContext.handleZIndexIncrease(windowId)}
+            onDragStart={() => windowContext.handleZIndexIncrease(windowId)}
+            onResizeStart={() => windowContext.handleZIndexIncrease(windowId)}
         >
             <div className = "Window-Container">
                 <div className = "Window-Header">
@@ -61,7 +61,7 @@ export default function Window({children, contentIcon, contentText, closeWindow,
                         <p>{contentText}</p>
                     </div>
                     <div id = "Window-Right"> 
-                        <h2 id = "Window-Minimize"><FaRegWindowMinimize /></h2>
+                        <h2 onClick = {() => windowContext.handleMinimizeWindow(windowId)} id = "Window-Minimize"><FaRegWindowMinimize /></h2>
                         <h2 onClick = {handleFullScreen} id = "Window-MMaximize"><LuMaximize2 /></h2>
                         <h2 onClick = {closeWindow} id = "Window-Close"><FaX /></h2>
                     </div>

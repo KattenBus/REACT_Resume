@@ -45,8 +45,10 @@ export default function Desktop_StartScreen() {
                     if (icon.Id === 4) {
                         folderContext.setCurrentFolderPath(['My Computer'])
                         windowContext.handleShowWindow(icon.Id)
+                        windowContext.handleRestoreWindow(icon.Id)
                     } else {
                         windowContext.handleShowWindow(icon.Id)
+                        windowContext.handleRestoreWindow(icon.Id)
                     }
                 }}
                 />
@@ -56,7 +58,9 @@ export default function Desktop_StartScreen() {
                 windowId={5}
             />
             
-            {windowContext.openWindows.map((windowId) => {
+            {windowContext.openWindows
+            .filter(id => !windowContext.minimizedWindows.includes(id))
+            .map((windowId) => {
                 const windowData = iconInformation.find((icon) => icon.Id === windowId);
                 const pictureData = pictures.find((picture) => picture.Id === windowId);
                 return (
