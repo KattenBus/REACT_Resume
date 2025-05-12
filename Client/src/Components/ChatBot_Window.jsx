@@ -24,7 +24,7 @@ export default function Chatbot() {
       const userMessage = question;
       setQuestion('');
   
-      const response = await fetch('http://localhost:5000/api/ask-bot', {
+      const response = await fetch('https://react-resume-uqm7.onrender.com/api/ask-bot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
