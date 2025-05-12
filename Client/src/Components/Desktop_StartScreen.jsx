@@ -15,6 +15,7 @@ import { useContext } from "react";
 import { FolderContext } from "../Context/Folder-Context";
 import { WindowContext } from "../Context/Window-Context";
 import { MenuContext } from "../Context/Menu-Context";
+import CV from "./CV";
 
 
 export default function Desktop_StartScreen() {
@@ -72,16 +73,7 @@ export default function Desktop_StartScreen() {
                         closeWindow={() => windowContext.handleCloseWindow(windowId)}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
-                        {windowId === 2 && <Folder_Icon_Structure>
-                            {pictures.map((picture, index) => (
-                                <Folder_Icon 
-                                key={index}
-                                imageIcon={picture.image}
-                                iconText={picture.name}
-                                doubleClick={() => windowContext.handleShowWindow(picture.Id)}
-                                />
-                            ))}
-                        </Folder_Icon_Structure>}
+                        {windowId === 2 && <CV />}
                         {windowId === 3 && <VideoPlayer/>}
                         {windowId === 4 && (
                             <>

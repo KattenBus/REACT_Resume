@@ -775,6 +775,196 @@ main {
   transition-duration: 500ms;
 }
 
+/*--------------------------------CV---------------------------------------------------------*/
+.CV-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+#CV-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+#CV-header-icons {
+  font-size: 40px;
+}
+
+#CV-left_side {
+  width: 30%;
+  background-color: #51829B;
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+  border-radius: 5px;
+}
+#CV-summary {
+  background-color:darkred;
+}
+
+#CV-avatar-section {
+  position: relative;
+}
+#CV-picture {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+#CV-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#CV-contactInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+#CV-contactInfo-object {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+#CV-Skills {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+#CV-specific-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#progressBar {
+  width: 100%;
+  background-color: #EADFB4;
+  border-radius: 10px;
+}
+#progressBar-percent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #F6995C;
+}
+
+#CV-education {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+#education-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#education-dates {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+#CV-right_side {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 20px;
+}
+
+#CV-about {
+  padding: 10px;
+  background-color: #9BB0C1;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#CV-workExperience {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #9BB0C1;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#job-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#job-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#work-dates {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10px;
+}
+#CV-border {
+  border-top: 2px solid #EADFB4;
+  border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#CV-left_side::-webkit-scrollbar,
+#CV-about::-webkit-scrollbar,
+#CV-workExperience::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#CV-left_side::-webkit-scrollbar-track,
+#CV-about::-webkit-scrollbar-track,
+#CV-workExperience::-webkit-scrollbar-track {
+  background: #EADFB4;
+  border-radius: 10px;
+}
+
+#CV-left_side::-webkit-scrollbar-thumb,
+#CV-about::-webkit-scrollbar-thumb,
+#CV-workExperience::-webkit-scrollbar-thumb {
+  background: #F6995C;
+  border-radius: 10px;
+}
+
+#CV-left_side::-webkit-scrollbar-thumb:hover,
+#CV-about::-webkit-scrollbar-thumb:hover,
+#CV-workExperience::-webkit-scrollbar-thumb:hover {
+  background: #f6873d;
+}
+#CV-left_side::-webkit-scrollbar-corner,
+#CV-about::-webkit-scrollbar-corner,
+#CV-workExperience::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 
 /*--------------------------------OTHER---------------------------------------------------------*/
 
