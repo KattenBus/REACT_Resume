@@ -42,7 +42,7 @@ export default function CV() {
                 <section id = "CV-Skills">
                     <div id = "CV-header">
                         <p id = "CV-header-icons"><TbAbacus /></p>
-                        <h1>Skills</h1>
+                        <h1>Färdigheter</h1>
                     </div>
                     {CV_Skills.map((skill) => (
                         <article key = {skill.id} id ="CV-specific-skill">
@@ -58,7 +58,7 @@ export default function CV() {
                 <section id = "CV-education">
                     <div id = "CV-header">
                         <p id = "CV-header-icons"><BsFillMortarboardFill /></p>
-                        <h1>Education</h1>
+                        <h1>Utbildning</h1>
                     </div>
                     {CV_education.map((edu) => (
                         <article key={edu.id} id = "education-entry">
@@ -76,7 +76,7 @@ export default function CV() {
                 <section id = "CV-about">
                     <div id = "CV-header">
                         <p id = "CV-header-icons"><IoInformationCircle /></p>
-                        <h1>About</h1>
+                        <h1>Kort om mig</h1>
                     </div>
                     <p>
                         Jag är en engagerad och driven systemutvecklare med en solid grund inom 
@@ -95,7 +95,7 @@ export default function CV() {
                 <section id = "CV-workExperience">
                     <div id = "CV-header">
                         <p id = "CV-header-icons"><MdOutlineWork /></p>
-                        <h1>Work Experience</h1>
+                        <h1>Arbetslivserfarenhet</h1>
                     </div>
                     <article id = "job-container">
                         {CV_workExperience.map((job) => (

@@ -626,23 +626,24 @@ main {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  position: relative;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
 }
 #conversation-window {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 10%); 
   width: 100%;
-  background-color:#bbb;
   font-size: 20px;
   padding: 10px;
   overflow: auto;
   overflow-x: hidden;
-  gap: 10px;
+  gap: 30px;
 }
 .chat-message-pair {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 
 #kidelbejn-answer {
@@ -652,13 +653,14 @@ main {
   align-items: center;
   gap: 10px;
   padding: 10px;
+  width: 70%;
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #kidelbejn-avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-
   font-size: 14px;
   gap: 2px;
 }
@@ -675,19 +677,21 @@ main {
 
 #user-message {
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   border-radius: 5px;
   align-items: center;
   justify-content: end;
+  margin-left: auto; 
   gap: 10px;
   padding: 10px;
+  width: 70%;
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #user-avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-
   font-size: 14px;
   gap: 2px;
 }
@@ -703,29 +707,43 @@ main {
 }
 
 #message-area {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: row;
   background-color:#bbb;
-  height: 40px;
+  height: 60px;
   flex-grow: 0;
   flex-shrink: 0;
+  width: 70%;
+  border-radius: 50px;
+  background-color: transparent;
+  gap: 10px;
 }
 #inputField-chatBot {
   width: 100%;
   font-size: 20px;
   overflow: scroll;
   border: none;
+  border-radius: 50px;
 }
 #inputFieldd-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 60px;
   border: none;
   cursor: pointer;
+  border-radius: 50px;
+  transition: 500ms;
+}
+#inputFieldd-button:hover {
+  background-color: #47aeae;
+  transition: 500ms;
 }
 #chatbot-button-logo {
-
   animation: spinningLogo 0.3s alternate-reverse infinite;
 }
 

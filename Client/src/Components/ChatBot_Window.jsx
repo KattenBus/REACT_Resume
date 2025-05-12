@@ -51,24 +51,24 @@ export default function Chatbot() {
     <>
       <div className = "chatbot-container">
         <div id = "conversation-window">
-        {chatHistory.map((entry, index) => (
-          <div key={index} className="chat-message-pair">
-            <div id="user-message">
-              <p>{entry.user}</p>
-              <div id="user-avatar-section">
-                <img src={User_Icon} id="user-avatar-photo" />
-                <p>Du:</p>
+          {chatHistory.map((entry, index) => (
+            <div key={index} className="chat-message-pair">
+              <div id="user-message">
+                <p>{entry.user}</p>
+                <div id="user-avatar-section">
+                  <img src={User_Icon} id="user-avatar-photo" />
+                  <p>Du:</p>
+                </div>
+              </div>
+              <div id="kidelbejn-answer">
+                <div id="kidelbejn-avatar-section">
+                  <img src={Cat} id="kidelbejn-avatar-photo" />
+                  <p>Kedelbejn</p>
+                </div>
+                <p>{entry.kedelbejn}</p>
               </div>
             </div>
-            <div id="kidelbejn-answer">
-              <div id="kidelbejn-avatar-section">
-                <img src={Cat} id="kidelbejn-avatar-photo" />
-                <p>Kedelbejn</p>
-              </div>
-              <p>{entry.kedelbejn}</p>
-            </div>
-          </div>
-        ))}
+          ))}
         </div>
         <form id = "message-area" onSubmit={handleSubmit}>
           <input id = "inputField-chatBot"
