@@ -1,5 +1,5 @@
 import Desktop_Icon from "./Desktop_Icon";
-import {iconInformation, pictures} from "./Data";
+import {iconInformation, musicFiles, pictures} from "./Data";
 import Window from "./Window";
 import Jobs_Text_File from "./Jobs_Text_File";
 import VideoPlayer from "./VideoPlayer";
@@ -16,6 +16,7 @@ import { FolderContext } from "../Context/Folder-Context";
 import { WindowContext } from "../Context/Window-Context";
 import { MenuContext } from "../Context/Menu-Context";
 import CV from "./CV";
+import MusicPlayer from "./MusicPlayer";
 
 
 export default function Desktop_StartScreen() {
@@ -26,11 +27,16 @@ export default function Desktop_StartScreen() {
 
     return(
         <ol className="Desktop-StartScreen">
-
             {menuContext.showMenu && 
-                <DropDown_Menu 
-                    onItemClick={windowContext.handleShowWindow}
-                />
+                <>
+                    <DropDown_Menu 
+                        onItemClick={(id) => {
+                            windowContext.handleShowWindow(id); 
+                            windowContext.handleRestoreWindow(id);
+                        }}
+                    />
+                    <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
+                </>
             }
 
             {iconInformation
@@ -64,12 +70,13 @@ export default function Desktop_StartScreen() {
             .map((windowId) => {
                 const windowData = iconInformation.find((icon) => icon.Id === windowId);
                 const pictureData = pictures.find((picture) => picture.Id === windowId);
+                const trackData = musicFiles.find((track) => track.Id === windowId);
                 return (
                     <Window
                         key={windowId}
                         windowId={windowId}
-                        contentIcon={windowId >= 20 && windowId <= 24 ? pictureData.image : windowData.image}
-                        contentText={windowId >= 20 && windowId <= 24 ? pictureData.name : windowData.name}
+                        contentIcon={windowId >= 20 && windowId <= 24 ? pictureData.image : windowId >= 30 && windowId <= 40 ? trackData.image : windowData.image}
+                        contentText={windowId >= 20 && windowId <= 24 ? pictureData.name : windowId >= 30 && windowId <= 40 ? trackData.title : windowData.name}
                         closeWindow={() => windowContext.handleCloseWindow(windowId)}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
@@ -82,8 +89,8 @@ export default function Desktop_StartScreen() {
                                         {folderContext.getCurrentFolderContent(folderContext.currentFolderPath).map((item, index) => (
                                         <Folder_Icon
                                             key={index}
-                                            imageIcon={item.image || item.imagePath}
-                                            iconText={item.name}
+                                            imageIcon={item.image || item.imagePath || item.coverArt}
+                                            iconText={item.name || item.title}
                                             doubleClick={() => item.onOpen(folderContext.currentFolderPath)}
                                         />
                                         ))}
@@ -100,14 +107,14 @@ export default function Desktop_StartScreen() {
                                 imagePath={pictureData.image}
                             />
                         )}
+                        {windowId >= 30 && windowId <= 40 && (
+                            <MusicPlayer 
+                                musicId = {windowId}
+                            />
+                        )}
                     </Window>
                 );
             })}
-
-            {menuContext.showMenu && 
-                <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
-            }
-
         </ol>
     );
 }

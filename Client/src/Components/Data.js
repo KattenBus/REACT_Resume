@@ -9,6 +9,12 @@ import Test_Image_3 from "/Test_Image_3.jpg";
 import Test_Image_4 from "/Test_Image_4.jpg";
 import Cat from "/Cat.jpg";
 import Simon_Nya_Zeeland from "/Simon_Nya_Zeeland.jpg";
+import mp3_logo from "/mp3.png";
+import jester_V5 from "/144_jester_V5.mp3"
+import background from "/Background.jpg";
+import sample from "/sample-15s.mp3";
+import toon_Link from "/Toon_Link.jpg";
+
 
 export const textFilesData = [{
     workPlace: "Biometria",
@@ -321,6 +327,21 @@ export const pictures = [{
   y: 50,
 },
 ]
+
+export const musicFiles = [{
+  Id: 30,
+  image: mp3_logo,
+  coverArt: background,
+  title: "144_jester_V5.mp3",
+  track: jester_V5,
+},
+{
+  Id: 31,
+  image: mp3_logo,
+  coverArt: toon_Link,
+  title: "Sample_Music.mp3",
+  track: sample,
+},]
 
 export const catJokes = [{
   joke: "Why did the cat sit on the computer? Because he wanted to keep an eye on the mouse!"

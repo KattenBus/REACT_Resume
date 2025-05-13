@@ -2,7 +2,7 @@ import { useState, createContext } from "react"
 import { useContext, useEffect } from "react";
 import { WindowContext } from "./Window-Context.jsx";
 
-import { MY_PC_Folder, gamesFolder, pictures} from "../Components/Data.js";
+import { MY_PC_Folder, gamesFolder, pictures, musicFiles} from "../Components/Data.js";
 
 
 export const FolderContext = createContext();
@@ -30,6 +30,10 @@ export default function FolderContextProvider({children}) {
     'My Computer/Pictures': pictures.map(picture => ({
       ...picture,
       onOpen: () => windowContext.handleShowWindow(picture.Id)
+    })),
+    'My Computer/Music': musicFiles.map(track => ({
+      ...track,
+      onOpen: () => windowContext.handleShowWindow(track.Id)
     })),
   }
 
