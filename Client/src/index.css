@@ -4,6 +4,9 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   overflow: hidden;
   cursor: url(mouse.png), auto;
@@ -632,10 +635,10 @@ main {
 #conversation-window {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 10%); 
+  height: 100%;
   width: 100%;
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
   overflow: auto;
   overflow-x: hidden;
   gap: 30px;
@@ -707,20 +710,18 @@ main {
 }
 
 #message-area {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: row;
   background-color:#bbb;
   height: 60px;
-  flex-grow: 0;
   flex-shrink: 0;
   width: 70%;
   border-radius: 50px;
   background-color: transparent;
   gap: 10px;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #inputField-chatBot {
   width: 100%;
@@ -728,6 +729,7 @@ main {
   overflow: scroll;
   border: none;
   border-radius: 50px;
+  padding-left: 10px;
 }
 #inputFieldd-button {
   display: flex;
@@ -738,12 +740,27 @@ main {
   cursor: pointer;
   border-radius: 50px;
   transition: 500ms;
+  flex-shrink: 0;
 }
-#inputFieldd-button:hover {
-  background-color: #47aeae;
+#light #inputFieldd-button:hover {
+  background-color: #98c2c2;
   transition: 500ms;
 }
-#chatbot-button-logo {
+#dark #inputFieldd-button:hover {
+  background-color: #bd8381;
+  transition: 500ms;
+}
+#chatbot-button-arrowLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+#chatbot-button-catLogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
   animation: spinningLogo 0.3s alternate-reverse infinite;
 }
 
@@ -990,4 +1007,43 @@ main {
   width: 100%;
   height: 100%;
 }
+
+#light #conversation-window::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#light #conversation-window::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#light #conversation-window::-webkit-scrollbar-thumb {
+  background: #98c2c2;
+  border-radius: 10px;
+}
+#light #conversation-window::-webkit-scrollbar-thumb:hover {
+  background: #98c2c2;
+}
+#light #conversation-window::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+#dark #conversation-window::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#dark #conversation-window::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#dark #conversation-window::-webkit-scrollbar-thumb {
+  background: #bd8381;
+  border-radius: 10px;
+}
+#dark #conversation-window::-webkit-scrollbar-thumb:hover {
+  background: #bd8381;
+}
+#dark #conversation-window::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Cat from "/Cat.jpg";
 import User_Icon from "/User_Icon.png";
 import { FaCat } from "react-icons/fa";
@@ -8,6 +8,15 @@ export default function Chatbot() {
   const [question, setQuestion] = useState('');
   const [loading, setLoading] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
+
+  const scrollToBottomRef = useRef(null);
+
+  useEffect(() => {
+  scrollToBottomRef.current?.scrollIntoView({   
+      behavior: "smooth",
+      block: "nearest",
+     });
+  }, [chatHistory]);
 
   const handleInputChange = (event) => {
     setQuestion(event.target.value);
@@ -69,16 +78,17 @@ export default function Chatbot() {
               </div>
             </div>
           ))}
+          <div ref={scrollToBottomRef} />
         </div>
         <form id = "message-area" onSubmit={handleSubmit}>
           <input id = "inputField-chatBot"
             type="text"
             value={question}
             onChange={handleInputChange}
-            placeholder="Ställ honom en fråga!"
+            placeholder="Ställ en fråga till Kedelbejn!"
           />
           <button type="submit" id = "inputFieldd-button" disabled={loading}>
-            {loading ? <p id = "chatbot-button-logo"><FaCat /></p> : <p><FaLocationArrow /></p>}
+            {loading ? <p id = "chatbot-button-catLogo"><FaCat /></p> : <p id = "chatbot-button-arrowLogo"><FaLocationArrow /></p>}
           </button>
         </form>
       </div>
