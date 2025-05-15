@@ -245,6 +245,13 @@ export const iconInformation = [{
     image: Cat,
     x: 50,
     y: 50,
+},
+{
+    Id: 6,
+    name: "Info.txt",
+    image: Text_Doc_logo,
+    x: 650,
+    y: 50,
 }];
 
 export const MY_PC_Folder = [{
