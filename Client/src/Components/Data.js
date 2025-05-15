@@ -15,6 +15,15 @@ import background from "/Background.jpg";
 import sample from "/sample-15s.mp3";
 import toon_Link from "/Toon_Link.jpg";
 
+import Simon_Är_Starkast_I_Poolen from "/Simon_Är_Starkast_I_Poolen.jpg";
+import Simon_Dricker_Öl_Och_Är_Glad_På_Ängen from "/Simon_Dricker_Öl_Och_Är_Glad_På_Ängen.jpg";
+import Simon_Fokuserad_I_Poolen from "/Simon_Fokuserad_I_Poolen.jpg";
+import Simon_Har_Ont_I_Ryggen_På_Ängen from "/Simon_Har_Ont_I_Ryggen_På_Ängen.jpg";
+import Simon_Skogen from "/Simon_Skogen.jpg";
+import Simon_Skrattar_I_Poolen from "/Simon_Skrattar_I_Poolen.jpg";
+import Simon_Sträcker_Sig_Ner_På_Ängen from "/Simon_Sträcker_Sig_Ner_På_Ängen.jpg";
+import Simon_Visar_Ängen from "/Simon_Visar_Ängen.jpg";
+
 
 export const textFilesData = [{
     workPlace: "Biometria",
@@ -299,41 +308,96 @@ export const gamesFolder = [{
 }];
 
 export const pictures = [{
-  Id: 20,
+  Id: 10,
   name: "Test 1",
   image: Test_Image_1,
   x: 500,
   y: 50,
 },
 {
-  Id: 21,
+  Id: 11,
   name: "Test 2",
   image: Test_Image_2,
   x: 500,
   y: 50,
 },
 {
-  Id: 22,
+  Id: 12,
   name: "Test 3",
   image: Test_Image_3,
   x: 500,
   y: 50,
 },
 {
-  Id: 23,
+  Id: 13,
   name: "Test 4",
   image: Test_Image_4,
   x: 500,
   y: 50,
 },
 {
-  Id: 24,
+  Id: 14,
   name: "Simon Nya Zeeland",
   image: Simon_Nya_Zeeland,
   x: 500,
   y: 50,
 },
-]
+{
+  Id: 15,
+  name: "Simon dricker öl",
+  image: Simon_Dricker_Öl_Och_Är_Glad_På_Ängen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 16,
+  name: "Simon är fokuserad i poolen",
+  image: Simon_Fokuserad_I_Poolen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 17,
+  name: "Simon har ont i ryggen på ängen",
+  image: Simon_Har_Ont_I_Ryggen_På_Ängen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 18,
+  name: "Simon är i skogen",
+  image: Simon_Skogen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 19,
+  name: "Simon är starkast i poolen",
+  image: Simon_Är_Starkast_I_Poolen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 20,
+  name: "Simon visar den fina ängen",
+  image: Simon_Visar_Ängen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 21,
+  name: "Simon skrattar i poolen",
+  image: Simon_Skrattar_I_Poolen,
+  x: 500,
+  y: 50,
+},
+{
+  Id: 22,
+  name: "Simon sträcker sig ner på ängen",
+  image: Simon_Sträcker_Sig_Ner_På_Ängen,
+  x: 500,
+  y: 50,
+}]
 
 export const musicFiles = [{
   Id: 30,

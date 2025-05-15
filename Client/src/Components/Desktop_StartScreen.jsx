@@ -78,8 +78,8 @@ export default function Desktop_StartScreen() {
                     <Window
                         key={windowId}
                         windowId={windowId}
-                        contentIcon={windowId >= 20 && windowId <= 24 ? pictureData.image : windowId >= 30 && windowId <= 40 ? trackData.image : windowData.image}
-                        contentText={windowId >= 20 && windowId <= 24 ? pictureData.name : windowId >= 30 && windowId <= 40 ? trackData.title : windowData.name}
+                        contentIcon={windowId >= 10 && windowId <= 29 ? pictureData.image : windowId >= 30 && windowId <= 40 ? trackData.image : windowData.image}
+                        contentText={windowId >= 10 && windowId <= 29 ? pictureData.name : windowId >= 30 && windowId <= 40 ? trackData.title : windowData.name}
                         closeWindow={() => windowContext.handleCloseWindow(windowId)}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
@@ -105,7 +105,7 @@ export default function Desktop_StartScreen() {
                         )}
                         {windowId === 5 && <Chatbot_Window/>}
                         {windowId === 6 && <Info_Text_File />}
-                        {windowId >= 20 && windowId <= 24 && pictureData && (
+                        {windowId >= 10 && windowId <= 29 && pictureData && (
                             <Image_Viewer
                                 imageText={pictureData.name}
                                 imagePath={pictureData.image}
