@@ -203,14 +203,13 @@ main {
   align-items: center;
   color: #FFFFFF;
   cursor: default;
-  height: 7rem;
-  width: 7rem;
+  padding: 5px;
+  gap: 5px;
 }
 #icon-Image {
   height: 5rem;
   width: 5rem;
   object-fit: contain;
-  margin-bottom: 5px;
 }
 #icon-Text {
   width: 5rem;
