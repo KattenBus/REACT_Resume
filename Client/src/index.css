@@ -389,11 +389,18 @@ main {
 /*--------------------------------DROPDOWN MENU---------------------------------------------------------*/
 
 .Menu-Container {
-  background-color: #47aeae;
   position: absolute;
-  z-index: 90;
-  border-radius: 5px 5px 5px 5px;
-  border: 3px solid #98c2c2;
+  top: 40px;
+  left: 0;
+  z-index: 999999;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease-out;
+  border-radius: 0 0 10px 10px;
+}
+.Menu-Container.expanded {
+  max-height: 1000px;
+  transition: max-height 300ms ease-in;
 }
 .Menu-Container ~ #overlay {
   display: block;
@@ -413,20 +420,37 @@ main {
   background-color: rgba(0, 0, 0, 0.0);
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 9999;
 }
-
 #light .Menu-Container {
   color: black;
-  background-color: #47aeae;
-  border: 3px solid #98c2c2;
-  transition-duration: 500ms;
+  background: rgba(71, 174, 174, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: none solid #98c2c2;
 }
 #dark .Menu-Container {
   color: #FFFFFF;
-  background-color: #bc605d;
-  border: 3px solid #bd8381;
-  transition-duration: 500ms;
+  background: rgba(188, 96, 93, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: none solid rgba(188, 96, 93, 0.3);
+}
+#light .Menu-Container.expanded {
+  color: black;
+  background: rgba(71, 174, 174, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #98c2c2;
+}
+#dark .Menu-Container.expanded {
+  color: #FFFFFF;
+  background: rgba(188, 96, 93, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(188, 96, 93, 0.3);
 }
 #light .Menu-Items:hover {
   border-radius: 30px 0px 0px 0px;

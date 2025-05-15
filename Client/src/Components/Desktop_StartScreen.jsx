@@ -28,17 +28,19 @@ export default function Desktop_StartScreen() {
 
     return(
         <ol className="Desktop-StartScreen">
+
+            <DropDown_Menu 
+                onItemClick={(id) => {
+                    windowContext.handleShowWindow(id); 
+                    windowContext.handleRestoreWindow(id);
+                }}
+            />
             {menuContext.showMenu && 
-                <>
-                    <DropDown_Menu 
-                        onItemClick={(id) => {
-                            windowContext.handleShowWindow(id); 
-                            windowContext.handleRestoreWindow(id);
-                        }}
-                    />
-                    <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
-                </>
+                <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
             }
+
+
+            
 
             {iconInformation
             .filter(icon => icon.Id !== 5)
