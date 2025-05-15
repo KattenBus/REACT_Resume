@@ -246,7 +246,6 @@ main {
   height: 2.5rem;
   cursor: default;
   flex-shrink: 0;
-
 }
 #light .Window-Header {
   transition-duration: 500ms;
@@ -271,9 +270,11 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 5px;
 }
 #Window-Image {
-  height: 2rem;
+  height: 1.5rem;
+  margin-left: 5px;
 }
 #Window-Right {
   display: flex;
