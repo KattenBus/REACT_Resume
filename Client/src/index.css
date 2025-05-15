@@ -329,7 +329,7 @@ main {
   flex-direction: row;
   background-color: whitesmoke;
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y:hidden;
 }
 
 .Window-Container {
@@ -477,62 +477,99 @@ main {
 .Folder-Container{
   display: flex;
   flex-direction: row;
-  overflow: scroll;
   width: 100%;
   height: 100%;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
 }
-#folder-content::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1.5rem;
-}
+
 #folder-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
+  padding: 20px;
+  gap: 10px;
 }
-
-
-
 
 /*--------------------------------FOLDER-SIDEBAR-----------------------------------------*/
 #folder-sidebar {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #bc605d;
+  width: 200px;
+  flex-shrink: 0;
   overflow: scroll;
   overflow-x: hidden;
-  flex-shrink: 0;
-  background-color: whitesmoke;
-
+  background-color: #d6d6d6;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
 }
-#folder-section {
+
+#folder-sidebar-header {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#folder-sidebar-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  transition-duration: 200ms;
 }
-
+#light #folder-sidebar-item:hover{
+  background-color: #98c2c2;
+  transition-duration: 200ms;
+}
+#dark #folder-sidebar-item:hover{
+  background-color: #bd8381;
+  transition-duration: 200ms;
+}
 #folder-sidebar-image {
   height: 2rem;
   width: 2rem;
 }
-#folder-sidebar-text {
 
+#folder-goBack-button-active {
+  cursor: pointer;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto 10px auto;
+  transition-duration: 200ms;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-#folder-section:hover {
-  background-color: #bd8381;
+#light #folder-goBack-button-active:hover {
+  background-color: #98c2c2;
   transition-duration: 200ms;
 }
-#folder-goBack-button-active {
-
+#dark #folder-goBack-button-active:hover {
+  background-color: #bd8381;
+  transition-duration: 200ms;
 }
 #folder-goBack-button-passive {
   opacity: 0.6;
   cursor: not-allowed;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /*--------------------------------FOLDER-ICONS---------------------------------------------------------*/
@@ -542,15 +579,14 @@ main {
   align-items: center;
   color: #FFFFFF;
   cursor: default;
-  height: 5rem;
-  width: 5rem;
-
+  padding: 5px;
+  gap: 5px;
+  user-select: none;
 }
 #folder-icon-image {
   height: 5rem;
   width: 5rem;
   object-fit: contain;
-  margin-bottom: 5px;
 }
 #folder-icon-text {
   width: 5rem;
@@ -599,20 +635,16 @@ main {
   justify-content: center;
   height: 100%;
   width: 100%;
-  overflow: auto;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 20px;
   gap: 5px;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
 }
 #empty-folder-picture {
   max-height: 20rem;
   width: auto;
   border-radius: 15px;
 }
-#empty-folder-text{
-
-}
-
 
 /*--------------------------------CHATBOT---------------------------------------------------------*/
 
@@ -1251,6 +1283,9 @@ main {
   height: 100%;
 }
 
+
+/*--------------------------------SIDEBARS---------------------------------------------------------*/
+
 #light #conversation-window::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1289,4 +1324,78 @@ main {
   background: transparent;
 }
 
+#light #folder-sidebar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#light #folder-sidebar::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#light #folder-sidebar::-webkit-scrollbar-thumb {
+  background: #98c2c2;
+  border-radius: 10px;
+}
+#light #folder-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #98c2c2;
+}
+#light #folder-sidebar::-webkit-scrollbar-corner {
+  background: transparent;
+}
 
+#dark #folder-sidebar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#dark #folder-sidebar::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#dark #folder-sidebar::-webkit-scrollbar-thumb {
+  background: #bd8381;
+  border-radius: 10px;
+}
+#dark #folder-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #bd8381;
+}
+#dark #folder-sidebar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+#light .Window-Body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#light .Window-Body::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#light .Window-Body::-webkit-scrollbar-thumb {
+  background: #98c2c2;
+  border-radius: 10px;
+}
+#light .Window-Body::-webkit-scrollbar-thumb:hover {
+  background: #98c2c2;
+}
+#light .Window-Body::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+#dark .Window-Body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#dark .Window-Body::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+#dark .Window-Body::-webkit-scrollbar-thumb {
+  background: #bd8381;
+  border-radius: 10px;
+}
+#dark .Window-Body::-webkit-scrollbar-thumb:hover {
+  background: #bd8381;
+}
+#dark .Window-Body::-webkit-scrollbar-corner {
+  background: transparent;
+}
