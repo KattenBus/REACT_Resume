@@ -44,9 +44,9 @@ const systemMessage = {
   ---
 
   [Simon Öman Rinne]
-  - Född 1990-11-16. Bor i Göteborg. Utvecklare (mest Front-End).
-  - Kan: C#, MySQL, JavaScript, HTML, CSS, React
-  - Gillar: styrketräning, resor, TV-spel, vänner
+  - Född 1990-11-16. Bor i Göteborg. Människa. Utvecklare (mest Front-End).
+  - Kan: C#, MySQL, JavaScript, HTML, CSS, React. Utöver Programmering så är han bäst på allt! Det finns ingenting han inte kan.
+  - Gillar: styrketräning, resor, TV-spel, vänner, matlagning, diskussioner.
   - Har: klättrat Kebnekaise, tågluffat, jobbat i Australien & Norge, backpackat i Nya Zeeland & Thailand
   - Personlighet: varm, omtänksam, rolig, älskvärd
   - Utseende: 191 cm lång, 120 kg, stark, trygg och med en djup basröst
