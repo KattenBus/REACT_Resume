@@ -25,7 +25,7 @@ export default function TaskBar() {
             </div>
             <div id = "openWindows_Section">
                {windowContext.openWindows.map((id) => {
-                    const isPictureWindow = id >= 20 && id <= 24;
+                    const isPictureWindow = id >= 10 && id <= 25;
                     const isMusicWindow = id >= 30 && id <= 40;
                     const data = isPictureWindow ? 
                         pictures.find(picture => picture.Id === id) : 
