@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Cat from "/Cat.jpg";
 import User_Icon from "/User_Icon.png";
-import { FaCat } from "react-icons/fa";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaCat, FaLocationArrow } from "react-icons/fa";
 
 export default function Chatbot() {
   const [question, setQuestion] = useState('');
@@ -12,10 +11,10 @@ export default function Chatbot() {
   const scrollToBottomRef = useRef(null);
 
   useEffect(() => {
-  scrollToBottomRef.current?.scrollIntoView({   
+    scrollToBottomRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
-     });
+    });
   }, [chatHistory]);
 
   const handleInputChange = (event) => {
@@ -24,25 +23,30 @@ export default function Chatbot() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
     if (!question) return;
-  
     setLoading(true);
-  
+
     try {
       const userMessage = question;
       setQuestion('');
-  
+
+      // Format chat history for OpenAI
+      const formattedMessages = chatHistory.flatMap((entry) => [
+        { role: 'user', content: entry.user },
+        { role: 'assistant', content: entry.kedelbejn },
+      ]);
+      formattedMessages.push({ role: 'user', content: userMessage });
+
       const response = await fetch('https://react-resume-uqm7.onrender.com/api/ask-bot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ question: userMessage }),
+        body: JSON.stringify({ messages: formattedMessages }),
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
         setChatHistory((prev) => [...prev, { user: userMessage, kedelbejn: data.answer }]);
       } else {
@@ -55,11 +59,11 @@ export default function Chatbot() {
       setLoading(false);
     }
   };
-  
+
   return (
     <>
-      <div className = "chatbot-container">
-        <div id = "conversation-window">
+      <div className="chatbot-container">
+        <div id="conversation-window">
           {chatHistory.map((entry, index) => (
             <div key={index} className="chat-message-pair">
               <div id="user-message">
@@ -80,15 +84,20 @@ export default function Chatbot() {
           ))}
           <div ref={scrollToBottomRef} />
         </div>
-        <form id = "message-area" onSubmit={handleSubmit}>
-          <input id = "inputField-chatBot"
+        <form id="message-area" onSubmit={handleSubmit}>
+          <input
+            id="inputField-chatBot"
             type="text"
             value={question}
             onChange={handleInputChange}
             placeholder="Ställ en fråga till Kedelbejn!"
           />
-          <button type="submit" id = "inputFieldd-button" disabled={loading}>
-            {loading ? <p id = "chatbot-button-catLogo"><FaCat /></p> : <p id = "chatbot-button-arrowLogo"><FaLocationArrow /></p>}
+          <button type="submit" id="inputFieldd-button" disabled={loading}>
+            {loading ? (
+              <p id="chatbot-button-catLogo"><FaCat /></p>
+            ) : (
+              <p id="chatbot-button-arrowLogo"><FaLocationArrow /></p>
+            )}
           </button>
         </form>
       </div>
