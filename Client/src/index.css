@@ -48,6 +48,7 @@ main {
   font-family: Arial, sans-serif;
   display: flex;
   align-items: center;
+  gap: 1px;
 }
 
 .time-separator {
@@ -72,7 +73,6 @@ main {
 .Task_Bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 2.5rem;
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -98,7 +98,10 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px;
+  padding-left: 20px;
+  gap: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 #Menu_Section p{
   user-select: none;
@@ -109,6 +112,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: flex-start;
   cursor: default;
   height: 100%;
   overflow: hidden;
@@ -126,9 +130,13 @@ main {
   height: 100%;
   gap: 5px;
   padding: 10px;
-  width: 200px;
+  max-width: 200px;
+  flex-shrink: 1;
   overflow: hidden;
+  padding: 5px;
+  max-width: 200px;
 }
+
 #light #openWindows-icon:hover {
   border-radius: 5px;
   background-color: rgba(71, 174, 174, 0.5);
@@ -142,20 +150,38 @@ main {
   height: 30px;
   width: auto;
 }
+
 #taskBarIcon-text {
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #Date_And_Time_Section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 10px;
+  flex-shrink: 0;
+  gap: 20px;
+  margin-left: auto; /* Pushes this section to the right */
+}
+#clock-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding-right: 20px;
 }
 #Vertical_Line {
   border-right: 1px solid #FFFFFF;
   height: 2.5rem;
-  margin: 20px;
+
+}
+#Vertical_Line_TaskBar {
+  border-right: 1px solid #FFFFFF;
+  height: 2.5rem;
+  margin-right: 20px;
 }
 #dot {
   height: 1.6rem;
@@ -174,6 +200,7 @@ main {
   transition: 500ms;
   outline: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 #darkMode-Button::after {
   content: '';
@@ -195,6 +222,48 @@ main {
   background-color: #47aeae;
 }
 
+/*--------------------------------GOOGLE SEARCHBAR---------------------------------------------------------*/
+
+.searchBar_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#searchBar_input {
+  padding: 4px ; /* space for icons */
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 16px;
+  height: 2rem;
+  border-radius: 335px;
+  border: none;
+  margin-left: 20px;
+}
+
+.icon-left {
+  position: absolute;
+  left: 26px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.icon-right {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*--------------------------------ICONS---------------------------------------------------------*/
 .icon-Structure {

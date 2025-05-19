@@ -5,6 +5,7 @@ import { useContext } from "react";
 import Clock from "./Clock";
 
 import {iconInformation, musicFiles, pictures} from "./Data";
+import Google_SearchBar from "./Google_SearchBar";
 
 
 export default function TaskBar() {
@@ -19,9 +20,9 @@ export default function TaskBar() {
 
     return (
         <nav className = "Task_Bar">
-            <div id = "Menu_Section">
-                <p onClick={menuContext.toogleMenu}>Menu</p>
-                <div id = "Vertical_Line"/>
+            <div id = "Menu_Section" onClick={menuContext.toogleMenu}>
+                <p>Menu</p>
+                <div id = "Vertical_Line_TaskBar"/>
             </div>
             <div id = "openWindows_Section">
                {windowContext.openWindows.map((id) => {
@@ -45,9 +46,13 @@ export default function TaskBar() {
 
             </div>
             <div id = "Date_And_Time_Section">
+                <Google_SearchBar />
                 <input id = "darkMode-Button" type = "checkbox" onClick={themeContext.toogleTheme}/>
-                <div id = "Vertical_Line"/>
-                <Clock />
+                <div id = "clock-section">
+                    <div id = "Vertical_Line"/>
+                    <Clock />
+                </div>
+
             </div>
         </nav>
     );
