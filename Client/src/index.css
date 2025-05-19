@@ -1169,6 +1169,7 @@ main {
   width: 20%;
   height: 6px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #track-progress-line {

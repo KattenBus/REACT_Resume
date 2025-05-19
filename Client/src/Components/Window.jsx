@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Rnd } from "react-rnd";
 import { FaX } from "react-icons/fa6";
 import { LuMaximize2 } from "react-icons/lu";
@@ -6,21 +6,32 @@ import { FaRegWindowMinimize } from "react-icons/fa";
 import { WindowContext } from "../Context/Window-Context";
 import { useContext } from "react";
 
-
+const initialWindowWidth = 500;
+const initialWindowHeight = 500;
 
 export default function Window({children, contentIcon, contentText, closeWindow, windowId}) {
 
 
     const windowContext = useContext(WindowContext);
 
-    const [position, setPosition] = useState({x: 400, y: 400});
-    const [size, setSize] = useState({width: 400, height: 400});
+    const [position, setPosition] = useState({x: 0, y: 0});
+    const [size, setSize] = useState({width: initialWindowWidth, height: initialWindowHeight});
     const [isFullScreen, setIsFullScreen] = useState(false);
+
+    const [previousSize, setPreviousSize] = useState();
+    const [previousPosition, setPreviousPosition] = useState();
+
+    useEffect(() => {
+        const centerX = (window.innerWidth - initialWindowWidth) / 2;
+        const centerY = (window.innerHeight- initialWindowHeight) / 2;
+
+        setPosition({x: centerX, y: centerY})
+    }, []);
 
     function handleFullScreen() {
         if (isFullScreen) {
-            setSize({ width: 400, height: 400 });
-            setPosition({ x: 400, y: 400 });
+            setSize({ width: previousSize.width, height: previousSize.height });
+            setPosition({ x: previousPosition.x, y: previousPosition.y });
             setIsFullScreen(false);
         } else {
             const viewportHeight = window.innerHeight
@@ -28,6 +39,9 @@ export default function Window({children, contentIcon, contentText, closeWindow,
             setSize({ width: viewportWidth, height: viewportHeight - 40 });
             setPosition({ x: 0, y: 0 });
             setIsFullScreen(true);
+
+            setPreviousSize({width: size.width, height: size.height});
+            setPreviousPosition({x: position.x, y: position.y});
         }
     };
 
