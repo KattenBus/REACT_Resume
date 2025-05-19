@@ -15,6 +15,11 @@ export default function WindowContextProvider({children}) {
 
   const [windowStates, setWindowStates] = useState({});
 
+
+  useEffect(() => {
+    console.log("windowstates:", windowStates);
+  }, [windowStates]);
+
   useEffect(() => {
     console.log("zIndices updated:", zIndices);
   }, [zIndices]);
@@ -33,17 +38,18 @@ export default function WindowContextProvider({children}) {
       const centerX = (window.innerWidth - initialWindowWidth) / 2;
       const centerY = (window.innerHeight - initialWindowHeight) / 2;
 
-      setWindowStates(previous => ({
-        ...previous,
-        [id]: {
-          position: {x: centerX, y: centerY},
-          size: {width: initialWindowWidth, height: initialWindowHeight},
-          isFullScreen: false,
-          previousSize: null,
-          previousPosition: null
-        }
-      }));
-
+      if(windowStates[id] === undefined) {
+        setWindowStates(previous => ({
+          ...previous,
+          [id]: {
+            position: {x: centerX, y: centerY},
+            size: {width: initialWindowWidth, height: initialWindowHeight},
+            isFullScreen: false,
+            previousSize: null,
+            previousPosition: null
+          }
+        }));
+      }
       setOpenWindows((previous) => [...previous, id]);
     }
     setZIndices(z => ({ ...z, [id]: nextZIndex++ }));
