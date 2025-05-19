@@ -1,4 +1,6 @@
 import { useState, createContext, useEffect } from "react"
+import { pictures, iconInformation} from "../Components/Data";
+
 
 
 export const WindowContext = createContext();
@@ -39,9 +41,11 @@ export default function WindowContextProvider({children}) {
       const centerY = (window.innerHeight - initialWindowHeight) / 2;
 
       if(windowStates[id] === undefined) {
+        const icon = iconInformation.find(icon => icon.Id === id) || pictures.find(picture => picture.Id === id);
         setWindowStates(previous => ({
           ...previous,
           [id]: {
+            label: icon ? icon.name : "unknown",
             position: {x: centerX, y: centerY},
             size: {width: initialWindowWidth, height: initialWindowHeight},
             isFullScreen: false,
