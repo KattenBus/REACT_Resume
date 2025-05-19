@@ -80,7 +80,6 @@ export default function Desktop_StartScreen() {
                         windowId={windowId}
                         contentIcon={windowId >= 10 && windowId <= 29 ? pictureData.image : windowId >= 30 && windowId <= 40 ? trackData.image : windowData.image}
                         contentText={windowId >= 10 && windowId <= 29 ? pictureData.name : windowId >= 30 && windowId <= 40 ? trackData.title : windowData.name}
-                        closeWindow={() => windowContext.handleCloseWindow(windowId)}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
                         {windowId === 2 && <CV />}

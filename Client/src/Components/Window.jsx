@@ -6,15 +6,13 @@ import { FaRegWindowMinimize } from "react-icons/fa";
 import { WindowContext } from "../Context/Window-Context";
 import { useContext } from "react";
 
-const initialWindowWidth = 500;
-const initialWindowHeight = 500;
+
 
 export default function Window({children, contentIcon, contentText, closeWindow, windowId}) {
 
-
     const windowContext = useContext(WindowContext);
 
-    const [position, setPosition] = useState({x: 0, y: 0});
+    {/*const [position, setPosition] = useState({x: 0, y: 0});
     const [size, setSize] = useState({width: initialWindowWidth, height: initialWindowHeight});
     const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -43,30 +41,36 @@ export default function Window({children, contentIcon, contentText, closeWindow,
             setPreviousSize({width: size.width, height: size.height});
             setPreviousPosition({x: position.x, y: position.y});
         }
-    };
+    };*/}
 
-    const rndClassName = `rnd-Options ${isFullScreen ? 'rnd-Options-Fullscreen' : ''}`;
+    const rndClassName = `rnd-Options ${windowContext.windowStates[windowId].isFullScreen ? 'rnd-Options-Fullscreen' : ''}`;
 
     return(
 
         <Rnd
             className = {rndClassName}
-            size = {{width: size.width, height: size.height}}
-            position = {{x: position.x, y: position.y}}
+            size = {{width: windowContext.windowStates[windowId]?.size.width, height: windowContext.windowStates[windowId]?.size.height}}
+            position = {{x: windowContext.windowStates[windowId]?.position.x, y: windowContext.windowStates[windowId]?.position.y}}
             dragHandleClassName="Window-Header"
-            onDragStop={(e, d) => setPosition({x: d.x, y: d.y})}
-            onResize={(e, direction, ref, delta, position) => {
-                setSize({
-                    width: ref.offsetWidth,
-                    height: ref.offsetHeight
+            onDragStop={(e, d) => {
+                windowContext.updateWindowStates(windowId, {
+                    position: { x: d.x, y: d.y }
                 });
-                setPosition(position)
+            }}
+            onResize={(e, direction, ref, delta, position) => {
+                windowContext.updateWindowStates(windowId, {
+                    size: { width: ref.offsetWidth, height: ref.offsetHeight },
+                    position
+                });
             }}
             bounds = ".Desktop-StartScreen"
             style={{ zIndex: windowContext.zIndices[windowId] || 0 }}
             onClick={() => windowContext.handleZIndexIncrease(windowId)}
             onDragStart={() => windowContext.handleZIndexIncrease(windowId)}
             onResizeStart={() => windowContext.handleZIndexIncrease(windowId)}
+            enableResizing={!windowContext.windowStates[windowId]?.isFullScreen}
+            disableDragging={windowContext.windowStates[windowId]?.isFullScreen}
+
         >
             <div className = "Window-Container">
                 <div className = "Window-Header">
@@ -76,8 +80,8 @@ export default function Window({children, contentIcon, contentText, closeWindow,
                     </div>
                     <div id = "Window-Right"> 
                         <h2 onClick = {() => windowContext.handleMinimizeWindow(windowId)} id = "Window-Minimize"><FaRegWindowMinimize /></h2>
-                        <h2 onClick = {handleFullScreen} id = "Window-MMaximize"><LuMaximize2 /></h2>
-                        <h2 onClick = {closeWindow} id = "Window-Close"><FaX /></h2>
+                        <h2 onClick = {() => windowContext.handleFullScreen(windowId)} id = "Window-MMaximize"><LuMaximize2 /></h2>
+                        <h2 onClick = {() => windowContext.handleCloseWindow(windowId)} id = "Window-Close"><FaX /></h2>
                     </div>
                 </div>
                 <div className = "Window-Body">
