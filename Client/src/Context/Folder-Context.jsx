@@ -56,7 +56,7 @@ export default function FolderContextProvider({children}) {
   }
 
   return(
-    <FolderContext.Provider value = {{folderContentsData, handleOpenFolder, handleGoBackFolder, getCurrentFolderContent, setCurrentFolderPath, currentFolderPath}}>
+    <FolderContext.Provider value = {{folderContentsData, handleOpenFolder, handleGoBackFolder, getCurrentFolderContent, setCurrentFolderPath, currentFolderPath, currentFolderPath}}>
       {children}
     </FolderContext.Provider>
   );

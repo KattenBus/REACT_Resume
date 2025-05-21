@@ -76,7 +76,7 @@ export default function Window({children, contentIcon, contentText, closeWindow,
                 <div className = "Window-Header">
                     <div id = "Window-Left">
                         <img id = "Window-Image" src = {contentIcon} alt = "Document-Logo" draggable = "false" />
-                        <p>{contentText}</p>
+                        <p id = "Window-text">{contentText}</p>
                     </div>
                     <div id = "Window-Right"> 
                         <h2 onClick = {() => windowContext.handleMinimizeWindow(windowId)} id = "Window-Minimize"><FaRegWindowMinimize /></h2>

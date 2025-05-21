@@ -3,18 +3,14 @@ import Folder_logo from "/Folder-logo.png";
 import MyPC_logo from "/MyPC-logo.png";
 import VLC_logo from "/VLC-logo.png";
 import CV_Picture from "/CV_Picture.jpg";
+import Cat from "/Cat.jpg";
+import mp3_logo from "/mp3.png";
+
 import Test_Image_1 from "/Test_Image_1.jpg";
 import Test_Image_2 from "/Test_Image_2.jpg";
 import Test_Image_3 from "/Test_Image_3.jpg";
 import Test_Image_4 from "/Test_Image_4.jpg";
-import Cat from "/Cat.jpg";
 import Simon_Nya_Zeeland from "/Simon_Nya_Zeeland.jpg";
-import mp3_logo from "/mp3.png";
-import jester_V5 from "/144_jester_V5.mp3"
-import background from "/Background.jpg";
-import sample from "/sample-15s.mp3";
-import toon_Link from "/Toon_Link.jpg";
-
 import Simon_Är_Starkast_I_Poolen from "/Simon_Är_Starkast_I_Poolen.jpg";
 import Simon_Dricker_Öl_Och_Är_Glad_På_Ängen from "/Simon_Dricker_Öl_Och_Är_Glad_På_Ängen.jpg";
 import Simon_Fokuserad_I_Poolen from "/Simon_Fokuserad_I_Poolen.jpg";
@@ -23,6 +19,17 @@ import Simon_Skogen from "/Simon_Skogen.jpg";
 import Simon_Skrattar_I_Poolen from "/Simon_Skrattar_I_Poolen.jpg";
 import Simon_Sträcker_Sig_Ner_På_Ängen from "/Simon_Sträcker_Sig_Ner_På_Ängen.jpg";
 import Simon_Visar_Ängen from "/Simon_Visar_Ängen.jpg";
+
+
+import background from "/Background.jpg";
+import Susumu_Hirasawa_CoverArt from "/Susumu_CoverArt.jpg";
+
+import jester_V5 from "/144_jester_V5.mp3"
+import Susumu_Hirasawa_Dream_Island_Obsessional_Park from "/Susumu Hirasawa - Dream Island Obsessional Park.mp3";
+import Susumu_Hirasawa_The_girl_in_Byakkoya from "/Susumu Hirasawa - The girl in Byakkoya.mp3";
+import susumu_hirasawa_soul_home_haWks from "/susumu_hirasawa-02-soul_home-haWks.mp3";
+import susumu_hirasawa_frozen_beach_haWks from "/susumu_hirasawa-07-frozen_beach-haWks.mp3";
+
 
 
 export const textFilesData = [{
@@ -403,16 +410,38 @@ export const musicFiles = [{
   Id: 30,
   image: mp3_logo,
   coverArt: background,
-  title: "144_jester_V5.mp3",
+  title: "Robin - 144_jester_V5",
   track: jester_V5,
 },
 {
   Id: 31,
   image: mp3_logo,
-  coverArt: toon_Link,
-  title: "Sample_Music.mp3",
-  track: sample,
-},]
+  coverArt: Susumu_Hirasawa_CoverArt,
+  title: "Susumu Hirasawa - Soul home hawks",
+  track: susumu_hirasawa_soul_home_haWks,
+},
+{
+  Id: 32,
+  image: mp3_logo,
+  coverArt: Susumu_Hirasawa_CoverArt,
+  title: "Susumu Hirasawa - Dream Island Obsessional Park",
+  track: Susumu_Hirasawa_Dream_Island_Obsessional_Park,
+},
+{
+  Id: 33,
+  image: mp3_logo,
+  coverArt: Susumu_Hirasawa_CoverArt,
+  title: "Susumu Hirasawa - The girl in Byakkoya",
+  track: Susumu_Hirasawa_The_girl_in_Byakkoya,
+},
+{
+  Id: 34,
+  image: mp3_logo,
+  coverArt: Susumu_Hirasawa_CoverArt,
+  title: "Susumu Hirasawa - Frozen beach hawks",
+  track: susumu_hirasawa_frozen_beach_haWks,
+},
+]
 
 export const catJokes = [{
   joke: "Why did the cat sit on the computer? Because he wanted to keep an eye on the mouse!"
