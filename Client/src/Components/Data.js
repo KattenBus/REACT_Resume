@@ -6,6 +6,15 @@ import CV_Picture from "/CV_Picture.jpg";
 import Cat from "/Cat.jpg";
 import mp3_logo from "/mp3.png";
 
+import Simon_Är_Starkast_I_Poolen_THUMBNAIL from "/Simon_Är_Starkast_I_Poolen_THUMBNAIL-min.jpg";
+import Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL from "/Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL-min.jpg";
+import Simon_Fokuserad_I_Poolen_THUMBNAIL from "/Simon_Fokuserad_I_Poolen_THUMBNAIL-min.jpg";
+import Simon_Har_Ont_I_Ryggen_På_Ängen_THUMBNAIL from "/Simon_Har_Ont_I_Ryggen_På_Ängen_THUMBNAIL-min.jpg";
+import Simon_Skogen_THUMBNAIL from "/Simon_Skogen.jpg";
+import Simon_Skrattar_I_Poolen_THUMBNAIL from "/Simon_Skrattar_I_Poolen_THUMBNAIL-min.jpg";
+import Simon_Sträcker_Sig_Ner_På_Ängen_THUMBNAIL from "/Simon_Sträcker_Sig_Ner_På_Ängen_THUMBNAIL-min.jpg";
+import Simon_Visar_Ängen_THUMBNAIL from "/Simon_Visar_Ängen_THUMBNAIL-min.jpg";
+
 import Test_Image_1 from "/Test_Image_1.jpg";
 import Test_Image_2 from "/Test_Image_2.jpg";
 import Test_Image_3 from "/Test_Image_3.jpg";
@@ -317,6 +326,7 @@ export const gamesFolder = [{
 export const pictures = [{
   Id: 10,
   name: "Test 1",
+  thumbnail: Test_Image_1,
   image: Test_Image_1,
   x: 500,
   y: 50,
@@ -324,6 +334,7 @@ export const pictures = [{
 {
   Id: 11,
   name: "Test 2",
+  thumbnail: Test_Image_2,
   image: Test_Image_2,
   x: 500,
   y: 50,
@@ -331,6 +342,7 @@ export const pictures = [{
 {
   Id: 12,
   name: "Test 3",
+  thumbnail: Test_Image_3,
   image: Test_Image_3,
   x: 500,
   y: 50,
@@ -338,6 +350,7 @@ export const pictures = [{
 {
   Id: 13,
   name: "Test 4",
+  thumbnail: Test_Image_4,
   image: Test_Image_4,
   x: 500,
   y: 50,
@@ -345,6 +358,7 @@ export const pictures = [{
 {
   Id: 14,
   name: "Simon Nya Zeeland",
+  thumbnail: Simon_Nya_Zeeland,
   image: Simon_Nya_Zeeland,
   x: 500,
   y: 50,
@@ -352,6 +366,7 @@ export const pictures = [{
 {
   Id: 15,
   name: "Simon dricker öl",
+  thumbnail: Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL,
   image: Simon_Dricker_Öl_Och_Är_Glad_På_Ängen,
   x: 500,
   y: 50,
@@ -359,6 +374,7 @@ export const pictures = [{
 {
   Id: 16,
   name: "Simon är fokuserad i poolen",
+  thumbnail: Simon_Fokuserad_I_Poolen_THUMBNAIL,
   image: Simon_Fokuserad_I_Poolen,
   x: 500,
   y: 50,
@@ -366,6 +382,7 @@ export const pictures = [{
 {
   Id: 17,
   name: "Simon har ont i ryggen på ängen",
+    thumbnail: Simon_Har_Ont_I_Ryggen_På_Ängen_THUMBNAIL,
   image: Simon_Har_Ont_I_Ryggen_På_Ängen,
   x: 500,
   y: 50,
@@ -373,6 +390,7 @@ export const pictures = [{
 {
   Id: 18,
   name: "Simon är i skogen",
+  thumbnail: Simon_Skogen_THUMBNAIL,
   image: Simon_Skogen,
   x: 500,
   y: 50,
@@ -380,6 +398,7 @@ export const pictures = [{
 {
   Id: 19,
   name: "Simon är starkast i poolen",
+  thumbnail: Simon_Är_Starkast_I_Poolen_THUMBNAIL,
   image: Simon_Är_Starkast_I_Poolen,
   x: 500,
   y: 50,
@@ -387,6 +406,7 @@ export const pictures = [{
 {
   Id: 20,
   name: "Simon visar den fina ängen",
+  thumbnail: Simon_Visar_Ängen_THUMBNAIL,
   image: Simon_Visar_Ängen,
   x: 500,
   y: 50,
@@ -394,6 +414,7 @@ export const pictures = [{
 {
   Id: 21,
   name: "Simon skrattar i poolen",
+  thumbnail: Simon_Skrattar_I_Poolen_THUMBNAIL,
   image: Simon_Skrattar_I_Poolen,
   x: 500,
   y: 50,
@@ -401,6 +422,7 @@ export const pictures = [{
 {
   Id: 22,
   name: "Simon sträcker sig ner på ängen",
+  thumbnail: Simon_Sträcker_Sig_Ner_På_Ängen_THUMBNAIL,
   image: Simon_Sträcker_Sig_Ner_På_Ängen,
   x: 500,
   y: 50,

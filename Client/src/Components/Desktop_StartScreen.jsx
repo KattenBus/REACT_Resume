@@ -91,7 +91,7 @@ export default function Desktop_StartScreen() {
                                         {folderContext.getCurrentFolderContent(folderContext.currentFolderPath).map((item, index) => (
                                         <Folder_Icon
                                             key={index}
-                                            imageIcon={item.image || item.imagePath || item.coverArt}
+                                            imageIcon={ item.thumbnail || item.image || item.imagePath || item.coverArt}
                                             iconText={item.name || item.title}
                                             doubleClick={() => item.onOpen(folderContext.currentFolderPath)}
                                         />
