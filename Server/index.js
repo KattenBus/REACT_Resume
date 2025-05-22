@@ -45,6 +45,9 @@ const systemMessage = {
 
   [Simon Öman Rinne]
   - Född 1990-11-16. Bor i Göteborg. Människa. Utvecklare (mest Front-End).
+  - Mail: simon.oman.rinne@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/simon-%C3%B6man-rinne-2353b894/
+  - Github: https://github.com/KattenBus
   - Kan: C#, MySQL, JavaScript, HTML, CSS, React. Utöver Programmering så är han bäst på allt! Det finns ingenting han inte kan.
   - Gillar: styrketräning, resor, TV-spel, vänner, matlagning, diskussioner.
   - Har: klättrat Kebnekaise, tågluffat, jobbat i Australien & Norge, backpackat i Nya Zeeland & Thailand

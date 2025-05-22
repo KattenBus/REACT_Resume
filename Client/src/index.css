@@ -222,6 +222,24 @@ main {
   background-color: #47aeae;
 }
 
+#contact-me-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 30px;
+  margin-left: 20px;
+}
+#dark #contact-me-section a{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+#light #contact-me-section a{
+  display: flex;
+  flex-direction: row;
+  color: #333333;
+}
+
 /*--------------------------------GOOGLE SEARCHBAR---------------------------------------------------------*/
 
 .searchBar_wrapper {
@@ -238,12 +256,12 @@ main {
   height: 2rem;
   border-radius: 335px;
   border: none;
-  margin-left: 20px;
+
 }
 
 .icon-left {
   position: absolute;
-  left: 26px;
+  left: 6px;
   top: 60%;
   transform: translateY(-50%);
   font-size: 22px;

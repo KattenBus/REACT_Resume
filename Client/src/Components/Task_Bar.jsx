@@ -7,6 +7,11 @@ import Clock from "./Clock";
 import {iconInformation, musicFiles, pictures} from "./Data";
 import Google_SearchBar from "./Google_SearchBar";
 
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
+
 
 export default function TaskBar() {
 
@@ -46,6 +51,11 @@ export default function TaskBar() {
 
             </div>
             <div id = "Date_And_Time_Section">
+                <div id = "contact-me-section">
+                    <a href = "mailto:simon.oman.rinne@gmail.com"><IoMdMail /></a>
+                    <a href="https://github.com/KattenBus"><FaGithub /></a>
+                    <a href = "https://www.linkedin.com/in/simon-%C3%B6man-rinne-2353b894/"><FaLinkedin /></a>
+                </div>
                 <Google_SearchBar />
                 <input id = "darkMode-Button" type = "checkbox" onClick={themeContext.toogleTheme}/>
                 <div id = "clock-section">
