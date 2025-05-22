@@ -106,8 +106,7 @@ export default function Desktop_StartScreen() {
                         {windowId === 6 && <Info_Text_File />}
                         {windowId >= 10 && windowId <= 29 && pictureData && (
                             <Image_Viewer
-                                imageText={pictureData.name}
-                                imagePath={pictureData.image}
+                                pictureId={windowId}
                             />
                         )}
                         {windowId >= 30 && windowId <= 40 && (
