@@ -1,10 +1,11 @@
-import Text_Doc_logo from "/Text_Doc-logo.png";
-import Folder_logo from "/Folder-logo.png";
-import MyPC_logo from "/MyPC-logo.png";
-import VLC_logo from "/VLC-logo.png";
-import CV_Picture from "/CV_Picture.jpg";
+import Text_Doc_logo from "/TXT_File_Logo.png";
+import Folder_logo from "/Folder_Logo.png";
+import MyPC_logo from "/MY_COMPUTER_Logo.png";
+import VLC_logo from "/VLC_Logo.png";
+import CV_Picture from "/CV_Logo.png";
 import Cat from "/Cat.jpg";
 import mp3_logo from "/mp3.png";
+import pdf_logo from "/pdf_logo (2).png"
 
 import Simon_Är_Starkast_I_Poolen_THUMBNAIL from "/Simon_Är_Starkast_I_Poolen_THUMBNAIL-min.jpg";
 import Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL from "/Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL-min.jpg";
@@ -38,6 +39,11 @@ import Susumu_Hirasawa_Dream_Island_Obsessional_Park from "/Susumu Hirasawa - Dr
 import Susumu_Hirasawa_The_girl_in_Byakkoya from "/Susumu Hirasawa - The girl in Byakkoya.mp3";
 import susumu_hirasawa_soul_home_haWks from "/susumu_hirasawa-02-soul_home-haWks.mp3";
 import susumu_hirasawa_frozen_beach_haWks from "/susumu_hirasawa-07-frozen_beach-haWks.mp3";
+
+import CV_Application_Video from "/Videogenomgång CV-applikation.mp4"
+import BlackJack_Video from "/BlackJack - Video Demonstration.mp4";
+import Choose_Your_Own_Adventure_Video from "/Chhose your own adventure - Design Patterns - Video Demonstration.mp4";
+import Databas_MYSQL from "/Databas - Video Demonstration.mp4";
 
 
 
@@ -277,6 +283,13 @@ export const iconInformation = [{
     image: Text_Doc_logo,
     x: 650,
     y: 50,
+},
+{
+    Id: 7,
+    name: "Tidigare Projekt.pdf",
+    image: pdf_logo,
+    x: 800,
+    y: 50,
 }];
 
 export const MY_PC_Folder = [{
@@ -489,3 +502,44 @@ export const catJokes = [{
   joke: "What kind of car does a cool cat drive? A furr-ari!"
 },
 ]
+
+export const Project_files = [{
+  id: 1,
+  title: "CV Web applikation",
+  description: `The cat stared intently at the goldfish swimming in circles. 
+                A sudden gust of wind knocked the papers off the desk. 
+                She never expected the old map to lead to anything real. 
+                The coffee shop was unusually quiet for a Saturday morning. 
+                He wore mismatched socks and didn’t seem to care.`,
+  video: CV_Application_Video,
+},
+{
+  id: 2,
+  title: "Black Jack",
+  description: `The cat stared intently at the goldfish swimming in circles. 
+                A sudden gust of wind knocked the papers off the desk. 
+                She never expected the old map to lead to anything real. 
+                The coffee shop was unusually quiet for a Saturday morning. 
+                He wore mismatched socks and didn’t seem to care.`,
+  video: BlackJack_Video,
+},
+{
+  id: 3,
+  title: "Choose your own adventure",
+  description: `The cat stared intently at the goldfish swimming in circles. 
+                A sudden gust of wind knocked the papers off the desk. 
+                She never expected the old map to lead to anything real. 
+                The coffee shop was unusually quiet for a Saturday morning. 
+                He wore mismatched socks and didn’t seem to care.`,
+  video: Choose_Your_Own_Adventure_Video,
+},
+{
+  id: 4,
+  title: "MYSQL - Databas",
+  description: `The cat stared intently at the goldfish swimming in circles. 
+                A sudden gust of wind knocked the papers off the desk. 
+                She never expected the old map to lead to anything real. 
+                The coffee shop was unusually quiet for a Saturday morning. 
+                He wore mismatched socks and didn’t seem to care.`,
+  video: Databas_MYSQL,
+},]
