@@ -33,6 +33,7 @@ import Simon_Visar_Ängen from "/Simon_Visar_Ängen.jpg";
 
 import background from "/Background.jpg";
 import Susumu_Hirasawa_CoverArt from "/Susumu_CoverArt.jpg";
+import Robin_CoverArt from "/Robin_CoverArt.png";
 
 import jester_V5 from "/144_jester_V5.mp3"
 import Susumu_Hirasawa_Dream_Island_Obsessional_Park from "/Susumu Hirasawa - Dream Island Obsessional Park.mp3";
@@ -444,7 +445,7 @@ export const pictures = [{
 export const musicFiles = [{
   Id: 30,
   image: mp3_logo,
-  coverArt: background,
+  coverArt: Robin_CoverArt,
   title: "Robin - 144_jester_V5",
   track: jester_V5,
 },
