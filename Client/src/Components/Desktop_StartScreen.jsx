@@ -18,6 +18,7 @@ import { MenuContext } from "../Context/Menu-Context";
 import CV from "./CV";
 import MusicPlayer from "./MusicPlayer";
 import Info_Text_File from "./Info_Text_File";
+import Projects from "./Projects";
 
 
 export default function Desktop_StartScreen() {
@@ -104,6 +105,7 @@ export default function Desktop_StartScreen() {
                         )}
                         {windowId === 5 && <Chatbot_Window/>}
                         {windowId === 6 && <Info_Text_File />}
+                        {windowId === 7 && <Projects />}
                         {windowId >= 10 && windowId <= 29 && pictureData && (
                             <Image_Viewer
                                 pictureId={windowId}

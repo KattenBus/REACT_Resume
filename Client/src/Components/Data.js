@@ -507,40 +507,31 @@ export const catJokes = [{
 export const Project_files = [{
   id: 1,
   title: "CV Web applikation",
-  description: `The cat stared intently at the goldfish swimming in circles. 
-                A sudden gust of wind knocked the papers off the desk. 
-                She never expected the old map to lead to anything real. 
-                The coffee shop was unusually quiet for a Saturday morning. 
-                He wore mismatched socks and didn’t seem to care.`,
+  description: `Detta var det sista gruppprojektet vi gjorde i skolan.
+                Vi utvecklade en hemsida där användare enkelt kan skapa och anpassa sitt CV genom att välja design och lägga till den information de själva vill ha med.
+                Jag ansvarade för designen, som jag skapade i Figma, samt för frontendutvecklingen med React.`,
   video: CV_Application_Video,
 },
 {
   id: 2,
   title: "Black Jack",
-  description: `The cat stared intently at the goldfish swimming in circles. 
-                A sudden gust of wind knocked the papers off the desk. 
-                She never expected the old map to lead to anything real. 
-                The coffee shop was unusually quiet for a Saturday morning. 
-                He wore mismatched socks and didn’t seem to care.`,
+  description: `Detta var vårt allra första gruppprojekt i skolan – riktigt nostalgiskt!
+                Vi utvecklade ett Blackjack-spel i C#, där användare kunde registrera ett konto, logga in, sätta in och ta ut pengar, samt betta för att spela mot huset.`,
   video: BlackJack_Video,
 },
 {
   id: 3,
   title: "Choose your own adventure",
-  description: `The cat stared intently at the goldfish swimming in circles. 
-                A sudden gust of wind knocked the papers off the desk. 
-                She never expected the old map to lead to anything real. 
-                The coffee shop was unusually quiet for a Saturday morning. 
-                He wore mismatched socks and didn’t seem to care.`,
+  description: `Detta var mitt allra första egna projekt – ännu mer nostalgiskt!
+                Jag valde att skapa ett enkelt choose your own adventure-spel i C#. Spelarens mål var att hitta en by och övertala en av byborna att ge dem en nyckel, som sedan kunde användas för att öppna en dörr.
+                Alla scenarier var utspridda på en karta, där varje plats sparades med hjälp av X- och Y-koordinater.`,
   video: Choose_Your_Own_Adventure_Video,
 },
 {
   id: 4,
   title: "MYSQL - Databas",
-  description: `The cat stared intently at the goldfish swimming in circles. 
-                A sudden gust of wind knocked the papers off the desk. 
-                She never expected the old map to lead to anything real. 
-                The coffee shop was unusually quiet for a Saturday morning. 
-                He wore mismatched socks and didn’t seem to care.`,
+  description: `Inför momentet där vi skulle lära oss databaser valde jag att skapa en appliaktion för TV-spels samlare!
+                Användare kunde registrera ett konto, logga in och spara sina favoritspel tillsammans med relevant information om varje spel.
+                Jag använde C# tillsammans med MySQL för databashantering.`,
   video: Databas_MYSQL,
 },]
