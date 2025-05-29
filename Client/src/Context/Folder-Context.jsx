@@ -2,7 +2,7 @@ import { useState, createContext } from "react"
 import { useContext, useEffect } from "react";
 import { WindowContext } from "./Window-Context.jsx";
 
-import { MY_PC_Folder, gamesFolder, pictures, musicFiles} from "../Components/Data.js";
+import { MY_PC_Folder, gamesFolder, pictures, musicFiles, iconInformation} from "../Components/Data.js";
 
 
 export const FolderContext = createContext();
@@ -13,7 +13,6 @@ export default function FolderContextProvider({children}) {
 
   const [currentFolderPath, setCurrentFolderPath] = useState(['My Computer']);
   
-  // inside Folder-Context.jsx
   useEffect(() => {
   console.log("Current folder path is now:", currentFolderPath.join("/"));
   }, [currentFolderPath]);
@@ -34,6 +33,10 @@ export default function FolderContextProvider({children}) {
     'My Computer/Music': musicFiles.map(track => ({
       ...track,
       onOpen: () => windowContext.handleShowWindow(track.Id)
+    })),
+    'My Computer/Resume': iconInformation.filter(icon => icon.Id === 2).map(icon => ({
+      ...icon,
+      onOpen: () => windowContext.handleShowWindow(icon.Id)
     })),
   }
 

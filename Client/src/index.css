@@ -9,7 +9,6 @@ html {
 }
 body {
   overflow: hidden;
-  cursor: url(mouse.png), auto;
 }
 main {
   display: flex;
@@ -31,6 +30,7 @@ main {
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   flex-grow: 1;
 }
 #light .Desktop-StartScreen {
@@ -249,14 +249,13 @@ main {
 }
 
 #searchBar_input {
-  padding: 4px ; /* space for icons */
+  padding: 4px ;
   padding-left: 35px;
   padding-right: 35px;
   font-size: 16px;
   height: 2rem;
   border-radius: 335px;
   border: none;
-
 }
 
 .icon-left {
@@ -282,6 +281,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 
 /*--------------------------------ICONS---------------------------------------------------------*/
 .icon-Structure {
@@ -319,6 +319,18 @@ main {
 #dark .icon-Structure:hover {
   border-radius: 5px;
   background-color: rgba(188, 96, 93, 0.5);
+}
+
+@media screen and (max-width: 1366px) {
+  #icon-Image {
+    height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+  }
+  #icon-Text {
+    width: 5rem;
+    font-size: 14px;
+  }
 }
 
 
@@ -1011,6 +1023,20 @@ main {
   color: #FFFFFF;
   background-color: black;
   transition-duration: 500ms;
+}
+
+@media screen and (max-width: 1366px) {
+
+  .chatbot-icon {
+    height: 95px;
+    width: 95px;
+  }
+
+  #chatbot-picture {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+  }
 }
 
 /*--------------------------------CV---------------------------------------------------------*/
