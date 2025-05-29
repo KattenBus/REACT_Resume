@@ -711,6 +711,7 @@ main {
 
 /*--------------------------------IMAGE-VIEWER---------------------------------------------------------*/
 .image-viewer-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -722,6 +723,20 @@ main {
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   overflow: hidden;
   transition: transform 0.2s;
+}
+#image-viewer-name {
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  z-index: 2;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(30, 30, 30, 0.5);
+  width: 100%;
+  padding: 5px;
 }
 #image-viewer-picture {
   max-width: 100%;

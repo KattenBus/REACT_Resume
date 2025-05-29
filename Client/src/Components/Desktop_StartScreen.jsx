@@ -20,6 +20,9 @@ import MusicPlayer from "./MusicPlayer";
 import Info_Text_File from "./Info_Text_File";
 import Projects from "./Projects";
 
+import musicPlayer_logo from "/music_player_logo.png";
+import imageViewer_logo from "/photo_viewer_logo.png";
+
 
 export default function Desktop_StartScreen() {
 
@@ -79,8 +82,8 @@ export default function Desktop_StartScreen() {
                     <Window
                         key={windowId}
                         windowId={windowId}
-                        contentIcon={windowId >= 10 && windowId <= 29 ? pictureData.image : windowId >= 30 && windowId <= 40 ? trackData.image : windowData.image}
-                        contentText={windowId >= 10 && windowId <= 29 ? pictureData.name : windowId >= 30 && windowId <= 40 ? trackData.title : windowData.name}
+                        contentIcon={windowId >= 10 && windowId <= 29 ? imageViewer_logo : windowId >= 30 && windowId <= 40 ? musicPlayer_logo : windowData.image}
+                        contentText={windowId >= 10 && windowId <= 29 ? "Photos" : windowId >= 30 && windowId <= 40 ? "Music Player" : windowData.name}
                     >
                         {windowId === 1 && <Jobs_Text_File/>}
                         {windowId === 2 && <CV />}

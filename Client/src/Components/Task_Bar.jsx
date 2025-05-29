@@ -53,8 +53,8 @@ export default function TaskBar() {
             <div id = "Date_And_Time_Section">
                 <div id = "contact-me-section">
                     <a href = "mailto:simon.oman.rinne@gmail.com"><IoMdMail /></a>
-                    <a href="https://github.com/KattenBus"><FaGithub /></a>
-                    <a href = "https://www.linkedin.com/in/simon-%C3%B6man-rinne-2353b894/"><FaLinkedin /></a>
+                    <a href="https://github.com/KattenBus" target="_blank"><FaGithub /></a>
+                    <a href = "https://www.linkedin.com/in/simon-%C3%B6man-rinne-2353b894/" target="_blank"><FaLinkedin /></a>
                 </div>
                 <Google_SearchBar />
                 <input id = "darkMode-Button" type = "checkbox" onClick={themeContext.toogleTheme}/>

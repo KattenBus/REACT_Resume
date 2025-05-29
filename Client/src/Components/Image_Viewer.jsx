@@ -92,6 +92,7 @@ function previousPicture() {
       onMouseMove={handleMouseMove}
       style={{ cursor: isDragging.current ? "grabbing" : "grab" }}
     >
+      <p id = "image-viewer-name">{currentPicture.name}</p>
       <img
         id="image-viewer-picture"
         src={currentPicture.image}
