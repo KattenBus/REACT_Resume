@@ -22,6 +22,7 @@ import Projects from "./Projects";
 
 import musicPlayer_logo from "/music_player_logo.png";
 import imageViewer_logo from "/photo_viewer_logo.png";
+import Calculator from "./Calculator";
 
 
 export default function Desktop_StartScreen() {
@@ -42,9 +43,6 @@ export default function Desktop_StartScreen() {
             {menuContext.showMenu && 
                 <div onClick = {menuContext.toogleMenu} id = "overlay"></div>
             }
-
-
-            
 
             {iconInformation
             .filter(icon => icon.Id !== 5)

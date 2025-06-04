@@ -5,7 +5,8 @@ import VLC_logo from "/VLC_Logo.png";
 import CV_Picture from "/CV_Logo.png";
 import Cat from "/Cat.jpg";
 import mp3_logo from "/mp3.png";
-import pdf_logo from "/pdf_logo (2).png"
+import pdf_logo from "/pdf_logo (2).png";
+import calculator_logo from "/calculator_logo.png";
 
 import Simon_Är_Starkast_I_Poolen_THUMBNAIL from "/Simon_Är_Starkast_I_Poolen_THUMBNAIL-min.jpg";
 import Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL from "/Simon_Dricker_Öl_Och_Är_Glad_På_Ängen_THUMBNAIL-min.jpg";
@@ -15,6 +16,8 @@ import Simon_Skogen_THUMBNAIL from "/Simon_Skogen.jpg";
 import Simon_Skrattar_I_Poolen_THUMBNAIL from "/Simon_Skrattar_I_Poolen_THUMBNAIL-min.jpg";
 import Simon_Sträcker_Sig_Ner_På_Ängen_THUMBNAIL from "/Simon_Sträcker_Sig_Ner_På_Ängen_THUMBNAIL-min.jpg";
 import Simon_Visar_Ängen_THUMBNAIL from "/Simon_Visar_Ängen_THUMBNAIL-min.jpg";
+import Fina_vänner_är_fina_med_varandra from "/Fina_vänner_är_fina_med_varandra.jpg";
+import Simon_Björn_Tollin_Trevlig_Bild from "/Simon_Björn_Tollin_Trevlig_Bild.jpg";
 
 import Test_Image_1 from "/Test_Image_1.jpg";
 import Test_Image_2 from "/Test_Image_2.jpg";
@@ -49,24 +52,24 @@ import Databas_MYSQL from "/Databas - Video Demonstration.mp4";
 
 
 export const textFilesData = [{
-    workPlace: "Biometria",
+    workPlace: "Dikt?",
     startDate: "1990",
     endDate: "1994",
-    city: "Norrköping",
+    city: "Göteborg",
     description: "I skogen hörde jag fåglar sjunga och vinden susa genom träden.Solen började gå ner, och skuggorna längs stigen blev längre och längre. En ekorre sprang snabbt över stigen, hoppade upp i ett träd och försvann bland grenarna. Luften var frisk och fylld med doften av jord och mossa. Jag stannade för att lyssna på naturens ljud och kände mig helt lugn och i harmoni med omgivningen.",
 },
 {
-    workPlace: "Biometria",
+    workPlace: "Dikt?",
     startDate: "1990",
     endDate: "1994",
-    city: "Norrköping",
+    city: "Göteborg",
     description: "I skogen hörde jag fåglar sjunga och vinden susa genom träden.Solen började gå ner, och skuggorna längs stigen blev längre och längre. En ekorre sprang snabbt över stigen, hoppade upp i ett träd och försvann bland grenarna. Luften var frisk och fylld med doften av jord och mossa. Jag stannade för att lyssna på naturens ljud och kände mig helt lugn och i harmoni med omgivningen.",
 },
 {
-    workPlace: "Biometria",
+    workPlace: "Dikt?",
     startDate: "1990",
     endDate: "1994",
-    city: "Norrköping",
+    city: "Göteborg",
     description: "I skogen hörde jag fåglar sjunga och vinden susa genom träden.Solen började gå ner, och skuggorna längs stigen blev längre och längre. En ekorre sprang snabbt över stigen, hoppade upp i ett träd och försvann bland grenarna. Luften var frisk och fylld med doften av jord och mossa. Jag stannade för att lyssna på naturens ljud och kände mig helt lugn och i harmoni med omgivningen.",
 }];
 
@@ -245,7 +248,7 @@ export const CV_education = [{
 
 export const iconInformation = [{
     Id: 1,
-    name: "Work_Experience.txt",
+    name: "Random.txt",
     image: Text_Doc_logo,
     x: 500,
     y: 50,
@@ -291,7 +294,14 @@ export const iconInformation = [{
     image: pdf_logo,
     x: 800,
     y: 50,
-}];
+},
+/*{
+    Id: 8,
+    name: "Kalkylator",
+    image: calculator_logo,
+    x: 950,
+    y: 50,
+}*/];
 
 export const MY_PC_Folder = [{
   Id: 50,
@@ -337,39 +347,23 @@ export const gamesFolder = [{
   image: Folder_logo,
 }];
 
-export const pictures = [{
-  Id: 10,
-  name: "Test 1",
-  thumbnail: Test_Image_1,
-  image: Test_Image_1,
-  x: 500,
-  y: 50,
-},
-{
-  Id: 11,
-  name: "Test 2",
-  thumbnail: Test_Image_2,
-  image: Test_Image_2,
-  x: 500,
-  y: 50,
-},
-{
+export const pictures = [
+  {
   Id: 12,
-  name: "Test 3",
-  thumbnail: Test_Image_3,
-  image: Test_Image_3,
+  name: "Två vänner är vänskapliga med varandra",
+  thumbnail: Fina_vänner_är_fina_med_varandra,
+  image: Fina_vänner_är_fina_med_varandra,
   x: 500,
   y: 50,
 },
 {
   Id: 13,
-  name: "Test 4",
-  thumbnail: Test_Image_4,
-  image: Test_Image_4,
+  name: "Vänner gör vänskapliga saker",
+  thumbnail: Simon_Björn_Tollin_Trevlig_Bild,
+  image: Simon_Björn_Tollin_Trevlig_Bild,
   x: 500,
   y: 50,
-},
-{
+},{
   Id: 14,
   name: "Simon Nya Zeeland",
   thumbnail: Simon_Nya_Zeeland,
